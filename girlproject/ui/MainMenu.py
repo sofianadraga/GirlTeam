@@ -1,3 +1,4 @@
+
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
@@ -50,7 +51,7 @@ class Ui_MainMenu(object):
         item.setFont(font)
         self.listWidget.addItem(item)
         self.stackedWidget = QtWidgets.QStackedWidget(self.tab)
-        self.stackedWidget.setGeometry(QtCore.QRect(210, 0, 1701, 981))
+        self.stackedWidget.setGeometry(QtCore.QRect(190, 0, 1701, 981))
         self.stackedWidget.setToolTip("")
         self.stackedWidget.setToolTipDuration(2500)
         self.stackedWidget.setStatusTip("")
@@ -96,12 +97,12 @@ class Ui_MainMenu(object):
         self.L_ProcImage.setStyleSheet("background:white;")
         self.L_ProcImage.setText("")
         self.L_ProcImage.setObjectName("L_ProcImage")
-        self.w_GameOfLife = QtWidgets.QWidget(self.GameOfLife)
-        self.w_GameOfLife.setGeometry(QtCore.QRect(30, 610, 741, 241))
-        self.w_GameOfLife.setStyleSheet("border: 2px solid rgba(235, 225, 225, 0.9);")
-        self.w_GameOfLife.setObjectName("w_GameOfLife")
-        self.b_processImageGOF = QtWidgets.QPushButton(self.w_GameOfLife)
-        self.b_processImageGOF.setGeometry(QtCore.QRect(540, 80, 171, 41))
+        self.label = QtWidgets.QLabel(self.GameOfLife)
+        self.label.setGeometry(QtCore.QRect(10, 10, 16, 16))
+        self.label.setStyleSheet("background:transparent;")
+        self.label.setObjectName("label")
+        self.b_processImageGOF = QtWidgets.QPushButton(self.GameOfLife)
+        self.b_processImageGOF.setGeometry(QtCore.QRect(706, 790, 171, 41))
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
         brush.setStyle(QtCore.Qt.SolidPattern)
@@ -193,20 +194,70 @@ class Ui_MainMenu(object):
 "    text-decoration: underline;\n"
 "}")
         self.b_processImageGOF.setObjectName("b_processImageGOF")
-        self.layoutWidget = QtWidgets.QWidget(self.w_GameOfLife)
-        self.layoutWidget.setGeometry(QtCore.QRect(37, 41, 461, 161))
-        self.layoutWidget.setObjectName("layoutWidget")
-        self.gridLayout = QtWidgets.QGridLayout(self.layoutWidget)
-        self.gridLayout.setSizeConstraint(QtWidgets.QLayout.SetDefaultConstraint)
-        self.gridLayout.setContentsMargins(6, 0, 6, 0)
-        self.gridLayout.setHorizontalSpacing(4)
-        self.gridLayout.setVerticalSpacing(5)
-        self.gridLayout.setObjectName("gridLayout")
-        self.colorButton_0_0 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_0_0.setMouseTracking(True)
-        self.colorButton_0_0.setToolTipDuration(2500)
-        self.colorButton_0_0.setAutoFillBackground(False)
-        self.colorButton_0_0.setStyleSheet("QPushButton {\n"
+        self.pushButton_7 = QtWidgets.QPushButton(self.GameOfLife)
+        self.pushButton_7.setGeometry(QtCore.QRect(425, 681, 241, 91))
+        self.pushButton_7.setStyleSheet("QPushButton {\n"
+"    border: 0.5px solid white;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 3px solid white;\n"
+"}\n"
+"\n"
+"QPushButton:checked {\n"
+"    background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0,\n"
+"    stop:0 rgba(70, 35, 105, 200),\n"
+"    stop:0.427447 rgba(60, 75, 135, 200),\n"
+"    stop:1 rgba(120, 75, 135, 220));\n"
+"\n"
+"}")
+        self.pushButton_7.setText("")
+        self.pushButton_7.setCheckable(True)
+        self.pushButton_7.setObjectName("pushButton_7")
+        self.pushButton_8 = QtWidgets.QPushButton(self.GameOfLife)
+        self.pushButton_8.setGeometry(QtCore.QRect(676, 681, 241, 91))
+        self.pushButton_8.setStyleSheet("QPushButton {\n"
+"    border: 0.5px solid white;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 3px solid white;\n"
+"}\n"
+"\n"
+"QPushButton:checked {\n"
+"    background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0,\n"
+"    stop:0 rgba(70, 35, 105, 200),\n"
+"    stop:0.427447 rgba(60, 75, 135, 200),\n"
+"    stop:1 rgba(120, 75, 135, 220));\n"
+"}")
+        self.pushButton_8.setText("")
+        self.pushButton_8.setCheckable(True)
+        self.pushButton_8.setObjectName("pushButton_8")
+        self.pushButton_9 = QtWidgets.QPushButton(self.GameOfLife)
+        self.pushButton_9.setGeometry(QtCore.QRect(927, 681, 241, 91))
+        self.pushButton_9.setStyleSheet("QPushButton {\n"
+"    border: 0.5px solid white;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 3px solid white;\n"
+"}\n"
+"\n"
+"QPushButton:checked {\n"
+"    background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0,\n"
+"    stop:0 rgba(70, 35, 105, 200),\n"
+"    stop:0.427447 rgba(60, 75, 135, 200),\n"
+"    stop:1 rgba(120, 75, 135, 220));\n"
+"}")
+        self.pushButton_9.setText("")
+        self.pushButton_9.setCheckable(True)
+        self.pushButton_9.setObjectName("pushButton_9")
+        self.colorButton_0_66 = QtWidgets.QPushButton(self.GameOfLife)
+        self.colorButton_0_66.setGeometry(QtCore.QRect(480, 690, 41, 16))
+        self.colorButton_0_66.setMouseTracking(True)
+        self.colorButton_0_66.setToolTipDuration(2500)
+        self.colorButton_0_66.setAutoFillBackground(False)
+        self.colorButton_0_66.setStyleSheet("QPushButton {\n"
 "    background-color: #000000;\n"
 "    border: none;\n"
 "}\n"
@@ -219,16 +270,38 @@ class Ui_MainMenu(object):
 "    border: 3px solid black;\n"
 "}\n"
 "")
-        self.colorButton_0_0.setText("")
-        self.colorButton_0_0.setCheckable(True)
-        self.colorButton_0_0.setChecked(False)
-        self.colorButton_0_0.setObjectName("colorButton_0_0")
-        self.gridLayout.addWidget(self.colorButton_0_0, 0, 0, 1, 1)
-        self.colorButton_0_1 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_0_1.setMouseTracking(True)
-        self.colorButton_0_1.setToolTipDuration(2500)
-        self.colorButton_0_1.setAutoFillBackground(False)
-        self.colorButton_0_1.setStyleSheet("QPushButton {\n"
+        self.colorButton_0_66.setText("")
+        self.colorButton_0_66.setCheckable(True)
+        self.colorButton_0_66.setChecked(False)
+        self.colorButton_0_66.setObjectName("colorButton_0_66")
+        self.colorButton_0_67 = QtWidgets.QPushButton(self.GameOfLife)
+        self.colorButton_0_67.setGeometry(QtCore.QRect(571, 690, 41, 16))
+        self.colorButton_0_67.setMouseTracking(True)
+        self.colorButton_0_67.setToolTipDuration(2500)
+        self.colorButton_0_67.setAutoFillBackground(False)
+        self.colorButton_0_67.setStyleSheet("QPushButton {\n"
+"    background-color: #4B0082;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 3px solid white;\n"
+"}\n"
+"\n"
+"QPushButton:checked {\n"
+"    border: 3px solid black;\n"
+"}\n"
+"")
+        self.colorButton_0_67.setText("")
+        self.colorButton_0_67.setCheckable(True)
+        self.colorButton_0_67.setChecked(False)
+        self.colorButton_0_67.setObjectName("colorButton_0_67")
+        self.colorButton_0_68 = QtWidgets.QPushButton(self.GameOfLife)
+        self.colorButton_0_68.setGeometry(QtCore.QRect(525, 690, 42, 16))
+        self.colorButton_0_68.setMouseTracking(True)
+        self.colorButton_0_68.setToolTipDuration(2500)
+        self.colorButton_0_68.setAutoFillBackground(False)
+        self.colorButton_0_68.setStyleSheet("QPushButton {\n"
 "    background-color: #364135;\n"
 "    border: none;\n"
 "}\n"
@@ -243,17 +316,17 @@ class Ui_MainMenu(object):
 "    border: 3px solid black;\n"
 "}\n"
 "")
-        self.colorButton_0_1.setText("")
-        self.colorButton_0_1.setCheckable(True)
-        self.colorButton_0_1.setChecked(False)
-        self.colorButton_0_1.setObjectName("colorButton_0_1")
-        self.gridLayout.addWidget(self.colorButton_0_1, 0, 1, 1, 1)
-        self.colorButton_0_4 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_0_4.setMouseTracking(True)
-        self.colorButton_0_4.setToolTipDuration(2500)
-        self.colorButton_0_4.setAutoFillBackground(False)
-        self.colorButton_0_4.setStyleSheet("QPushButton {\n"
-"    background-color: #9B111E;\n"
+        self.colorButton_0_68.setText("")
+        self.colorButton_0_68.setCheckable(True)
+        self.colorButton_0_68.setChecked(False)
+        self.colorButton_0_68.setObjectName("colorButton_0_68")
+        self.colorButton_3_66 = QtWidgets.QPushButton(self.GameOfLife)
+        self.colorButton_3_66.setGeometry(QtCore.QRect(820, 690, 42, 16))
+        self.colorButton_3_66.setMouseTracking(True)
+        self.colorButton_3_66.setToolTipDuration(2500)
+        self.colorButton_3_66.setAutoFillBackground(False)
+        self.colorButton_3_66.setStyleSheet("QPushButton {\n"
+"    background-color: #C71585;\n"
 "    border: none;\n"
 "}\n"
 "QPushButton:hover {\n"
@@ -263,39 +336,56 @@ class Ui_MainMenu(object):
 "    border: 3px solid black;\n"
 "}\n"
 "")
-        self.colorButton_0_4.setText("")
-        self.colorButton_0_4.setCheckable(True)
-        self.colorButton_0_4.setChecked(False)
-        self.colorButton_0_4.setObjectName("colorButton_0_4")
-        self.gridLayout.addWidget(self.colorButton_0_4, 0, 4, 1, 1)
-        self.colorButton_0_5 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_0_5.setMouseTracking(True)
-        self.colorButton_0_5.setToolTipDuration(2500)
-        self.colorButton_0_5.setAutoFillBackground(False)
-        self.colorButton_0_5.setStyleSheet("QPushButton {\n"
-"    background-color: #FFA500;\n"
+        self.colorButton_3_66.setText("")
+        self.colorButton_3_66.setCheckable(True)
+        self.colorButton_3_66.setChecked(False)
+        self.colorButton_3_66.setObjectName("colorButton_3_66")
+        self.colorButton_3_67 = QtWidgets.QPushButton(self.GameOfLife)
+        self.colorButton_3_67.setGeometry(QtCore.QRect(775, 690, 41, 16))
+        self.colorButton_3_67.setMouseTracking(True)
+        self.colorButton_3_67.setToolTipDuration(2500)
+        self.colorButton_3_67.setAutoFillBackground(False)
+        self.colorButton_3_67.setStyleSheet("QPushButton {\n"
+"    background-color: #4B0082;\n"
 "    border: none;\n"
 "}\n"
-"\n"
-"\n"
 "QPushButton:hover {\n"
 "    border: 3px solid white;\n"
 "}\n"
-"\n"
 "QPushButton:checked {\n"
 "    border: 3px solid black;\n"
 "}\n"
 "")
-        self.colorButton_0_5.setText("")
-        self.colorButton_0_5.setCheckable(True)
-        self.colorButton_0_5.setChecked(False)
-        self.colorButton_0_5.setObjectName("colorButton_0_5")
-        self.gridLayout.addWidget(self.colorButton_0_5, 0, 5, 1, 1)
-        self.colorButton_0_6 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_0_6.setMouseTracking(True)
-        self.colorButton_0_6.setToolTipDuration(2500)
-        self.colorButton_0_6.setAutoFillBackground(False)
-        self.colorButton_0_6.setStyleSheet("QPushButton {\n"
+        self.colorButton_3_67.setText("")
+        self.colorButton_3_67.setCheckable(True)
+        self.colorButton_3_67.setChecked(False)
+        self.colorButton_3_67.setObjectName("colorButton_3_67")
+        self.colorButton_3_68 = QtWidgets.QPushButton(self.GameOfLife)
+        self.colorButton_3_68.setGeometry(QtCore.QRect(730, 690, 41, 16))
+        self.colorButton_3_68.setMouseTracking(True)
+        self.colorButton_3_68.setToolTipDuration(2500)
+        self.colorButton_3_68.setAutoFillBackground(False)
+        self.colorButton_3_68.setStyleSheet("QPushButton {\n"
+"    background-color: #0F52BA;\n"
+"    border: none;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    border: 3px solid white;\n"
+"}\n"
+"QPushButton:checked {\n"
+"    border: 3px solid black;\n"
+"}\n"
+"")
+        self.colorButton_3_68.setText("")
+        self.colorButton_3_68.setCheckable(True)
+        self.colorButton_3_68.setChecked(False)
+        self.colorButton_3_68.setObjectName("colorButton_3_68")
+        self.colorButton_0_69 = QtWidgets.QPushButton(self.GameOfLife)
+        self.colorButton_0_69.setGeometry(QtCore.QRect(980, 690, 41, 16))
+        self.colorButton_0_69.setMouseTracking(True)
+        self.colorButton_0_69.setToolTipDuration(2500)
+        self.colorButton_0_69.setAutoFillBackground(False)
+        self.colorButton_0_69.setStyleSheet("QPushButton {\n"
 "    background-color: #FFC0CB;\n"
 "    border: none;\n"
 "}\n"
@@ -306,16 +396,36 @@ class Ui_MainMenu(object):
 "    border: 3px solid black;\n"
 "}\n"
 "")
-        self.colorButton_0_6.setText("")
-        self.colorButton_0_6.setCheckable(True)
-        self.colorButton_0_6.setChecked(False)
-        self.colorButton_0_6.setObjectName("colorButton_0_6")
-        self.gridLayout.addWidget(self.colorButton_0_6, 0, 6, 1, 1)
-        self.colorButton_0_7 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_0_7.setMouseTracking(True)
-        self.colorButton_0_7.setToolTipDuration(2500)
-        self.colorButton_0_7.setAutoFillBackground(False)
-        self.colorButton_0_7.setStyleSheet("QPushButton {\n"
+        self.colorButton_0_69.setText("")
+        self.colorButton_0_69.setCheckable(True)
+        self.colorButton_0_69.setChecked(False)
+        self.colorButton_0_69.setObjectName("colorButton_0_69")
+        self.colorButton_0_70 = QtWidgets.QPushButton(self.GameOfLife)
+        self.colorButton_0_70.setGeometry(QtCore.QRect(1070, 690, 42, 16))
+        self.colorButton_0_70.setMouseTracking(True)
+        self.colorButton_0_70.setToolTipDuration(2500)
+        self.colorButton_0_70.setAutoFillBackground(False)
+        self.colorButton_0_70.setStyleSheet("QPushButton {\n"
+"    background-color: #90EE90;\n"
+"    border: none;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    border: 3px solid white;\n"
+"}\n"
+"QPushButton:checked {\n"
+"    border: 3px solid black;\n"
+"}\n"
+"")
+        self.colorButton_0_70.setText("")
+        self.colorButton_0_70.setCheckable(True)
+        self.colorButton_0_70.setChecked(False)
+        self.colorButton_0_70.setObjectName("colorButton_0_70")
+        self.colorButton_0_71 = QtWidgets.QPushButton(self.GameOfLife)
+        self.colorButton_0_71.setGeometry(QtCore.QRect(1025, 690, 41, 16))
+        self.colorButton_0_71.setMouseTracking(True)
+        self.colorButton_0_71.setToolTipDuration(2500)
+        self.colorButton_0_71.setAutoFillBackground(False)
+        self.colorButton_0_71.setStyleSheet("QPushButton {\n"
 "    background-color: #7FFFD4;\n"
 "    border: none;\n"
 "}\n"
@@ -328,950 +438,24 @@ class Ui_MainMenu(object):
 "    border: 3px solid black;\n"
 "}\n"
 "")
-        self.colorButton_0_7.setText("")
-        self.colorButton_0_7.setCheckable(True)
-        self.colorButton_0_7.setChecked(False)
-        self.colorButton_0_7.setObjectName("colorButton_0_7")
-        self.gridLayout.addWidget(self.colorButton_0_7, 0, 7, 1, 1)
-        self.colorButton_0_8 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_0_8.setMouseTracking(True)
-        self.colorButton_0_8.setToolTipDuration(2500)
-        self.colorButton_0_8.setAutoFillBackground(False)
-        self.colorButton_0_8.setStyleSheet("QPushButton {\n"
-"    background-color: #90EE90;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_0_8.setText("")
-        self.colorButton_0_8.setCheckable(True)
-        self.colorButton_0_8.setChecked(False)
-        self.colorButton_0_8.setObjectName("colorButton_0_8")
-        self.gridLayout.addWidget(self.colorButton_0_8, 0, 8, 1, 1)
-        self.colorButton_0_9 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_0_9.setMouseTracking(True)
-        self.colorButton_0_9.setToolTipDuration(2500)
-        self.colorButton_0_9.setAutoFillBackground(False)
-        self.colorButton_0_9.setStyleSheet("QPushButton {\n"
-"    background-color: #FFFDD0;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_0_9.setText("")
-        self.colorButton_0_9.setCheckable(True)
-        self.colorButton_0_9.setChecked(False)
-        self.colorButton_0_9.setObjectName("colorButton_0_9")
-        self.gridLayout.addWidget(self.colorButton_0_9, 0, 9, 1, 1)
-        self.colorButton_1_0 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_1_0.setMouseTracking(True)
-        self.colorButton_1_0.setToolTipDuration(2500)
-        self.colorButton_1_0.setAutoFillBackground(False)
-        self.colorButton_1_0.setStyleSheet("QPushButton {\n"
-"    background-color: #2F2F2F;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"/* Коли кнопка в стані наведення */\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"/* Коли кнопка натиснута й активна */\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_1_0.setText("")
-        self.colorButton_1_0.setCheckable(True)
-        self.colorButton_1_0.setChecked(False)
-        self.colorButton_1_0.setObjectName("colorButton_1_0")
-        self.gridLayout.addWidget(self.colorButton_1_0, 1, 0, 1, 1)
-        self.colorButton_1_1 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_1_1.setMouseTracking(True)
-        self.colorButton_1_1.setToolTipDuration(2500)
-        self.colorButton_1_1.setAutoFillBackground(False)
-        self.colorButton_1_1.setStyleSheet("QPushButton {\n"
-"    background-color: #3B2F2F;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_1_1.setText("")
-        self.colorButton_1_1.setCheckable(True)
-        self.colorButton_1_1.setChecked(False)
-        self.colorButton_1_1.setObjectName("colorButton_1_1")
-        self.gridLayout.addWidget(self.colorButton_1_1, 1, 1, 1, 1)
-        self.colorButton_1_2 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_1_2.setMouseTracking(True)
-        self.colorButton_1_2.setToolTipDuration(2500)
-        self.colorButton_1_2.setAutoFillBackground(False)
-        self.colorButton_1_2.setStyleSheet("QPushButton {\n"
-"    background-color: #008080;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_1_2.setText("")
-        self.colorButton_1_2.setCheckable(True)
-        self.colorButton_1_2.setChecked(False)
-        self.colorButton_1_2.setObjectName("colorButton_1_2")
-        self.gridLayout.addWidget(self.colorButton_1_2, 1, 2, 1, 1)
-        self.colorButton_1_3 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_1_3.setMouseTracking(True)
-        self.colorButton_1_3.setToolTipDuration(2500)
-        self.colorButton_1_3.setAutoFillBackground(False)
-        self.colorButton_1_3.setStyleSheet("QPushButton {\n"
-"    background-color:#006D77;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_1_3.setText("")
-        self.colorButton_1_3.setCheckable(True)
-        self.colorButton_1_3.setChecked(False)
-        self.colorButton_1_3.setObjectName("colorButton_1_3")
-        self.gridLayout.addWidget(self.colorButton_1_3, 1, 3, 1, 1)
-        self.colorButton_1_4 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_1_4.setMouseTracking(True)
-        self.colorButton_1_4.setToolTipDuration(2500)
-        self.colorButton_1_4.setAutoFillBackground(False)
-        self.colorButton_1_4.setStyleSheet("QPushButton {\n"
-"    background-color: #A52A2A;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_1_4.setText("")
-        self.colorButton_1_4.setCheckable(True)
-        self.colorButton_1_4.setChecked(False)
-        self.colorButton_1_4.setObjectName("colorButton_1_4")
-        self.gridLayout.addWidget(self.colorButton_1_4, 1, 4, 1, 1)
-        self.colorButton_1_5 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_1_5.setMouseTracking(True)
-        self.colorButton_1_5.setToolTipDuration(2500)
-        self.colorButton_1_5.setAutoFillBackground(False)
-        self.colorButton_1_5.setStyleSheet("QPushButton {\n"
-"    background-color: #FF0000;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_1_5.setText("")
-        self.colorButton_1_5.setCheckable(True)
-        self.colorButton_1_5.setChecked(False)
-        self.colorButton_1_5.setObjectName("colorButton_1_5")
-        self.gridLayout.addWidget(self.colorButton_1_5, 1, 5, 1, 1)
-        self.colorButton_1_6 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_1_6.setMouseTracking(True)
-        self.colorButton_1_6.setToolTipDuration(2500)
-        self.colorButton_1_6.setAutoFillBackground(False)
-        self.colorButton_1_6.setStyleSheet("QPushButton {\n"
-"    background-color: #DC143C;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_1_6.setText("")
-        self.colorButton_1_6.setCheckable(True)
-        self.colorButton_1_6.setChecked(False)
-        self.colorButton_1_6.setObjectName("colorButton_1_6")
-        self.gridLayout.addWidget(self.colorButton_1_6, 1, 6, 1, 1)
-        self.colorButton_1_7 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_1_7.setMouseTracking(True)
-        self.colorButton_1_7.setToolTipDuration(2500)
-        self.colorButton_1_7.setAutoFillBackground(False)
-        self.colorButton_1_7.setStyleSheet("QPushButton {\n"
-"    background-color: #87CEFA;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_1_7.setText("")
-        self.colorButton_1_7.setCheckable(True)
-        self.colorButton_1_7.setChecked(False)
-        self.colorButton_1_7.setObjectName("colorButton_1_7")
-        self.gridLayout.addWidget(self.colorButton_1_7, 1, 7, 1, 1)
-        self.colorButton_1_8 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_1_8.setMouseTracking(True)
-        self.colorButton_1_8.setToolTipDuration(2500)
-        self.colorButton_1_8.setAutoFillBackground(False)
-        self.colorButton_1_8.setStyleSheet("QPushButton {\n"
-"    background-color: #FFFFE0;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_1_8.setText("")
-        self.colorButton_1_8.setCheckable(True)
-        self.colorButton_1_8.setChecked(False)
-        self.colorButton_1_8.setObjectName("colorButton_1_8")
-        self.gridLayout.addWidget(self.colorButton_1_8, 1, 8, 1, 1)
-        self.colorButton_1_9 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_1_9.setMouseTracking(True)
-        self.colorButton_1_9.setToolTipDuration(2500)
-        self.colorButton_1_9.setAutoFillBackground(False)
-        self.colorButton_1_9.setStyleSheet("QPushButton {\n"
-"    background-color: #F5F5F5;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_1_9.setText("")
-        self.colorButton_1_9.setCheckable(True)
-        self.colorButton_1_9.setChecked(False)
-        self.colorButton_1_9.setObjectName("colorButton_1_9")
-        self.gridLayout.addWidget(self.colorButton_1_9, 1, 9, 1, 1)
-        self.colorButton_2_0 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_2_0.setMouseTracking(True)
-        self.colorButton_2_0.setToolTipDuration(2500)
-        self.colorButton_2_0.setAutoFillBackground(False)
-        self.colorButton_2_0.setStyleSheet("QPushButton {\n"
-"    background-color: #36454F;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"/* Коли кнопка в стані наведення */\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"/* Коли кнопка натиснута й активна */\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_2_0.setText("")
-        self.colorButton_2_0.setCheckable(True)
-        self.colorButton_2_0.setChecked(False)
-        self.colorButton_2_0.setObjectName("colorButton_2_0")
-        self.gridLayout.addWidget(self.colorButton_2_0, 2, 0, 1, 1)
-        self.colorButton_2_1 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_2_1.setMouseTracking(True)
-        self.colorButton_2_1.setToolTipDuration(2500)
-        self.colorButton_2_1.setAutoFillBackground(False)
-        self.colorButton_2_1.setStyleSheet("QPushButton {\n"
-"    background-color: #301934;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_2_1.setText("")
-        self.colorButton_2_1.setCheckable(True)
-        self.colorButton_2_1.setChecked(False)
-        self.colorButton_2_1.setObjectName("colorButton_2_1")
-        self.gridLayout.addWidget(self.colorButton_2_1, 2, 1, 1, 1)
-        self.colorButton_2_2 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_2_2.setMouseTracking(True)
-        self.colorButton_2_2.setToolTipDuration(2500)
-        self.colorButton_2_2.setAutoFillBackground(False)
-        self.colorButton_2_2.setStyleSheet("QPushButton {\n"
-"    background-color: #485320;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_2_2.setText("")
-        self.colorButton_2_2.setCheckable(True)
-        self.colorButton_2_2.setChecked(False)
-        self.colorButton_2_2.setObjectName("colorButton_2_2")
-        self.gridLayout.addWidget(self.colorButton_2_2, 2, 2, 1, 1)
-        self.colorButton_2_3 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_2_3.setMouseTracking(True)
-        self.colorButton_2_3.setToolTipDuration(2500)
-        self.colorButton_2_3.setAutoFillBackground(False)
-        self.colorButton_2_3.setStyleSheet("QPushButton {\n"
-"    background-color: #191970;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_2_3.setText("")
-        self.colorButton_2_3.setCheckable(True)
-        self.colorButton_2_3.setChecked(False)
-        self.colorButton_2_3.setObjectName("colorButton_2_3")
-        self.gridLayout.addWidget(self.colorButton_2_3, 2, 3, 1, 1)
-        self.colorButton_2_4 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_2_4.setMouseTracking(True)
-        self.colorButton_2_4.setToolTipDuration(2500)
-        self.colorButton_2_4.setAutoFillBackground(False)
-        self.colorButton_2_4.setStyleSheet("QPushButton {\n"
-"    background-color: #C04000;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_2_4.setText("")
-        self.colorButton_2_4.setCheckable(True)
-        self.colorButton_2_4.setChecked(False)
-        self.colorButton_2_4.setObjectName("colorButton_2_4")
-        self.gridLayout.addWidget(self.colorButton_2_4, 2, 4, 1, 1)
-        self.colorButton_2_5 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_2_5.setMouseTracking(True)
-        self.colorButton_2_5.setToolTipDuration(2500)
-        self.colorButton_2_5.setAutoFillBackground(False)
-        self.colorButton_2_5.setStyleSheet("QPushButton {\n"
-"    background-color: #800080;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_2_5.setText("")
-        self.colorButton_2_5.setCheckable(True)
-        self.colorButton_2_5.setChecked(False)
-        self.colorButton_2_5.setObjectName("colorButton_2_5")
-        self.gridLayout.addWidget(self.colorButton_2_5, 2, 5, 1, 1)
-        self.colorButton_2_6 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_2_6.setMouseTracking(True)
-        self.colorButton_2_6.setToolTipDuration(2500)
-        self.colorButton_2_6.setAutoFillBackground(False)
-        self.colorButton_2_6.setStyleSheet("QPushButton {\n"
-"    background-color: #00FF00;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_2_6.setText("")
-        self.colorButton_2_6.setCheckable(True)
-        self.colorButton_2_6.setChecked(False)
-        self.colorButton_2_6.setObjectName("colorButton_2_6")
-        self.gridLayout.addWidget(self.colorButton_2_6, 2, 6, 1, 1)
-        self.colorButton_2_7 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_2_7.setMouseTracking(True)
-        self.colorButton_2_7.setToolTipDuration(2500)
-        self.colorButton_2_7.setAutoFillBackground(False)
-        self.colorButton_2_7.setStyleSheet("QPushButton {\n"
-"    background-color: #87CEEB;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_2_7.setText("")
-        self.colorButton_2_7.setCheckable(True)
-        self.colorButton_2_7.setChecked(False)
-        self.colorButton_2_7.setObjectName("colorButton_2_7")
-        self.gridLayout.addWidget(self.colorButton_2_7, 2, 7, 1, 1)
-        self.colorButton_2_8 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_2_8.setMouseTracking(True)
-        self.colorButton_2_8.setToolTipDuration(2500)
-        self.colorButton_2_8.setAutoFillBackground(False)
-        self.colorButton_2_8.setStyleSheet("QPushButton {\n"
-"    background-color: #FFFF00;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_2_8.setText("")
-        self.colorButton_2_8.setCheckable(True)
-        self.colorButton_2_8.setChecked(False)
-        self.colorButton_2_8.setObjectName("colorButton_2_8")
-        self.gridLayout.addWidget(self.colorButton_2_8, 2, 8, 1, 1)
-        self.colorButton_2_9 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_2_9.setMouseTracking(True)
-        self.colorButton_2_9.setToolTipDuration(2500)
-        self.colorButton_2_9.setAutoFillBackground(False)
-        self.colorButton_2_9.setStyleSheet("QPushButton {\n"
-"    background-color: #D3D3D3;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_2_9.setText("")
-        self.colorButton_2_9.setCheckable(True)
-        self.colorButton_2_9.setChecked(False)
-        self.colorButton_2_9.setObjectName("colorButton_2_9")
-        self.gridLayout.addWidget(self.colorButton_2_9, 2, 9, 1, 1)
-        self.colorButton_3_0 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_3_0.setMouseTracking(True)
-        self.colorButton_3_0.setToolTipDuration(2500)
-        self.colorButton_3_0.setAutoFillBackground(False)
-        self.colorButton_3_0.setStyleSheet("QPushButton {\n"
-"    background-color: #00008B;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"/* Коли кнопка в стані наведення */\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"/* Коли кнопка натиснута й активна */\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_3_0.setText("")
-        self.colorButton_3_0.setCheckable(True)
-        self.colorButton_3_0.setChecked(False)
-        self.colorButton_3_0.setObjectName("colorButton_3_0")
-        self.gridLayout.addWidget(self.colorButton_3_0, 3, 0, 1, 1)
-        self.colorButton_3_1 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_3_1.setMouseTracking(True)
-        self.colorButton_3_1.setToolTipDuration(2500)
-        self.colorButton_3_1.setAutoFillBackground(False)
-        self.colorButton_3_1.setStyleSheet("QPushButton {\n"
-"    background-color: #3B3C36;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_3_1.setText("")
-        self.colorButton_3_1.setCheckable(True)
-        self.colorButton_3_1.setChecked(False)
-        self.colorButton_3_1.setObjectName("colorButton_3_1")
-        self.gridLayout.addWidget(self.colorButton_3_1, 3, 1, 1, 1)
-        self.colorButton_3_2 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_3_2.setMouseTracking(True)
-        self.colorButton_3_2.setToolTipDuration(2500)
-        self.colorButton_3_2.setAutoFillBackground(False)
-        self.colorButton_3_2.setStyleSheet("QPushButton {\n"
-"    background-color: #228B22;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_3_2.setText("")
-        self.colorButton_3_2.setCheckable(True)
-        self.colorButton_3_2.setChecked(False)
-        self.colorButton_3_2.setObjectName("colorButton_3_2")
-        self.gridLayout.addWidget(self.colorButton_3_2, 3, 2, 1, 1)
-        self.colorButton_3_3 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_3_3.setMouseTracking(True)
-        self.colorButton_3_3.setToolTipDuration(2500)
-        self.colorButton_3_3.setAutoFillBackground(False)
-        self.colorButton_3_3.setStyleSheet("QPushButton {\n"
-"    background-color: #0F52BA;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_3_3.setText("")
-        self.colorButton_3_3.setCheckable(True)
-        self.colorButton_3_3.setChecked(False)
-        self.colorButton_3_3.setObjectName("colorButton_3_3")
-        self.gridLayout.addWidget(self.colorButton_3_3, 3, 3, 1, 1)
-        self.colorButton_3_4 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_3_4.setMouseTracking(True)
-        self.colorButton_3_4.setToolTipDuration(2500)
-        self.colorButton_3_4.setAutoFillBackground(False)
-        self.colorButton_3_4.setStyleSheet("QPushButton {\n"
-"    background-color: #4B0082;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_3_4.setText("")
-        self.colorButton_3_4.setCheckable(True)
-        self.colorButton_3_4.setChecked(False)
-        self.colorButton_3_4.setObjectName("colorButton_3_4")
-        self.gridLayout.addWidget(self.colorButton_3_4, 3, 4, 1, 1)
-        self.colorButton_3_5 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_3_5.setMouseTracking(True)
-        self.colorButton_3_5.setToolTipDuration(2500)
-        self.colorButton_3_5.setAutoFillBackground(False)
-        self.colorButton_3_5.setStyleSheet("QPushButton {\n"
-"    background-color: #C71585;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_3_5.setText("")
-        self.colorButton_3_5.setCheckable(True)
-        self.colorButton_3_5.setChecked(False)
-        self.colorButton_3_5.setObjectName("colorButton_3_5")
-        self.gridLayout.addWidget(self.colorButton_3_5, 3, 5, 1, 1)
-        self.colorButton_3_6 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_3_6.setMouseTracking(True)
-        self.colorButton_3_6.setToolTipDuration(2500)
-        self.colorButton_3_6.setAutoFillBackground(False)
-        self.colorButton_3_6.setStyleSheet("QPushButton {\n"
-"    background-color: #00FF7F;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_3_6.setText("")
-        self.colorButton_3_6.setCheckable(True)
-        self.colorButton_3_6.setChecked(False)
-        self.colorButton_3_6.setObjectName("colorButton_3_6")
-        self.gridLayout.addWidget(self.colorButton_3_6, 3, 6, 1, 1)
-        self.colorButton_3_7 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_3_7.setMouseTracking(True)
-        self.colorButton_3_7.setToolTipDuration(2500)
-        self.colorButton_3_7.setAutoFillBackground(False)
-        self.colorButton_3_7.setStyleSheet("QPushButton {\n"
-"    background-color: #0000FF;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_3_7.setText("")
-        self.colorButton_3_7.setCheckable(True)
-        self.colorButton_3_7.setChecked(False)
-        self.colorButton_3_7.setObjectName("colorButton_3_7")
-        self.gridLayout.addWidget(self.colorButton_3_7, 3, 7, 1, 1)
-        self.colorButton_3_8 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_3_8.setMouseTracking(True)
-        self.colorButton_3_8.setToolTipDuration(2500)
-        self.colorButton_3_8.setAutoFillBackground(False)
-        self.colorButton_3_8.setStyleSheet("QPushButton {\n"
-"    background-color: #FFD700;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_3_8.setText("")
-        self.colorButton_3_8.setCheckable(True)
-        self.colorButton_3_8.setChecked(False)
-        self.colorButton_3_8.setObjectName("colorButton_3_8")
-        self.gridLayout.addWidget(self.colorButton_3_8, 3, 8, 1, 1)
-        self.colorButton_3_9 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_3_9.setMouseTracking(True)
-        self.colorButton_3_9.setToolTipDuration(2500)
-        self.colorButton_3_9.setAutoFillBackground(False)
-        self.colorButton_3_9.setStyleSheet("QPushButton {\n"
-"    background-color: #C0C0C0;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_3_9.setText("")
-        self.colorButton_3_9.setCheckable(True)
-        self.colorButton_3_9.setChecked(False)
-        self.colorButton_3_9.setObjectName("colorButton_3_9")
-        self.gridLayout.addWidget(self.colorButton_3_9, 3, 9, 1, 1)
-        self.colorButton_4_0 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_4_0.setMouseTracking(True)
-        self.colorButton_4_0.setToolTipDuration(2500)
-        self.colorButton_4_0.setAutoFillBackground(False)
-        self.colorButton_4_0.setStyleSheet("QPushButton {\n"
-"    background-color:#013220;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"/* Коли кнопка в стані наведення */\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"/* Коли кнопка натиснута й активна */\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_4_0.setText("")
-        self.colorButton_4_0.setCheckable(True)
-        self.colorButton_4_0.setChecked(False)
-        self.colorButton_4_0.setObjectName("colorButton_4_0")
-        self.gridLayout.addWidget(self.colorButton_4_0, 4, 0, 1, 1)
-        self.colorButton_4_1 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_4_1.setMouseTracking(True)
-        self.colorButton_4_1.setToolTipDuration(2500)
-        self.colorButton_4_1.setAutoFillBackground(False)
-        self.colorButton_4_1.setStyleSheet("QPushButton {\n"
-"    background-color:#800000;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_4_1.setText("")
-        self.colorButton_4_1.setCheckable(True)
-        self.colorButton_4_1.setChecked(False)
-        self.colorButton_4_1.setObjectName("colorButton_4_1")
-        self.gridLayout.addWidget(self.colorButton_4_1, 4, 1, 1, 1)
-        self.colorButton_4_2 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_4_2.setMouseTracking(True)
-        self.colorButton_4_2.setToolTipDuration(2500)
-        self.colorButton_4_2.setAutoFillBackground(False)
-        self.colorButton_4_2.setStyleSheet("QPushButton {\n"
-"    background-color: #8B4513;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"/* Коли кнопка в стані наведення */\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"/* Коли кнопка натиснута й активна */\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_4_2.setText("")
-        self.colorButton_4_2.setCheckable(True)
-        self.colorButton_4_2.setChecked(False)
-        self.colorButton_4_2.setObjectName("colorButton_4_2")
-        self.gridLayout.addWidget(self.colorButton_4_2, 4, 2, 1, 1)
-        self.colorButton_4_3 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_4_3.setMouseTracking(True)
-        self.colorButton_4_3.setToolTipDuration(2500)
-        self.colorButton_4_3.setAutoFillBackground(False)
-        self.colorButton_4_3.setStyleSheet("QPushButton {\n"
-"    background-color: #8B0000;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_4_3.setText("")
-        self.colorButton_4_3.setCheckable(True)
-        self.colorButton_4_3.setChecked(False)
-        self.colorButton_4_3.setObjectName("colorButton_4_3")
-        self.gridLayout.addWidget(self.colorButton_4_3, 4, 3, 1, 1)
-        self.colorButton_4_4 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_4_4.setMouseTracking(True)
-        self.colorButton_4_4.setToolTipDuration(2500)
-        self.colorButton_4_4.setAutoFillBackground(False)
-        self.colorButton_4_4.setStyleSheet("QPushButton {\n"
-"    background-color: #FF8C00;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_4_4.setText("")
-        self.colorButton_4_4.setCheckable(True)
-        self.colorButton_4_4.setChecked(False)
-        self.colorButton_4_4.setObjectName("colorButton_4_4")
-        self.gridLayout.addWidget(self.colorButton_4_4, 4, 4, 1, 1)
-        self.colorButton_4_5 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_4_5.setMouseTracking(True)
-        self.colorButton_4_5.setToolTipDuration(2500)
-        self.colorButton_4_5.setAutoFillBackground(False)
-        self.colorButton_4_5.setStyleSheet("QPushButton {\n"
-"    background-color: #FF00FF;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_4_5.setText("")
-        self.colorButton_4_5.setCheckable(True)
-        self.colorButton_4_5.setChecked(False)
-        self.colorButton_4_5.setObjectName("colorButton_4_5")
-        self.gridLayout.addWidget(self.colorButton_4_5, 4, 5, 1, 1)
-        self.colorButton_4_6 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_4_6.setMouseTracking(True)
-        self.colorButton_4_6.setToolTipDuration(2500)
-        self.colorButton_4_6.setAutoFillBackground(False)
-        self.colorButton_4_6.setStyleSheet("QPushButton {\n"
-"    background-color: #40E0D0;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_4_6.setText("")
-        self.colorButton_4_6.setCheckable(True)
-        self.colorButton_4_6.setChecked(False)
-        self.colorButton_4_6.setObjectName("colorButton_4_6")
-        self.gridLayout.addWidget(self.colorButton_4_6, 4, 6, 1, 1)
-        self.colorButton_4_7 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_4_7.setMouseTracking(True)
-        self.colorButton_4_7.setToolTipDuration(2500)
-        self.colorButton_4_7.setAutoFillBackground(False)
-        self.colorButton_4_7.setStyleSheet("QPushButton {\n"
-"    background-color: #E6E6FA;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_4_7.setText("")
-        self.colorButton_4_7.setCheckable(True)
-        self.colorButton_4_7.setChecked(False)
-        self.colorButton_4_7.setObjectName("colorButton_4_7")
-        self.gridLayout.addWidget(self.colorButton_4_7, 4, 7, 1, 1)
-        self.colorButton_4_8 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_4_8.setMouseTracking(True)
-        self.colorButton_4_8.setToolTipDuration(2500)
-        self.colorButton_4_8.setAutoFillBackground(False)
-        self.colorButton_4_8.setStyleSheet("QPushButton {\n"
-"    background-color: #FFFFF0;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_4_8.setText("")
-        self.colorButton_4_8.setCheckable(True)
-        self.colorButton_4_8.setChecked(False)
-        self.colorButton_4_8.setObjectName("colorButton_4_8")
-        self.gridLayout.addWidget(self.colorButton_4_8, 4, 8, 1, 1)
-        self.colorButton_4_9 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_4_9.setMouseTracking(True)
-        self.colorButton_4_9.setToolTipDuration(2500)
-        self.colorButton_4_9.setAutoFillBackground(False)
-        self.colorButton_4_9.setStyleSheet("QPushButton {\n"
-"    background-color: #FFFFFF;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_4_9.setText("")
-        self.colorButton_4_9.setCheckable(True)
-        self.colorButton_4_9.setChecked(False)
-        self.colorButton_4_9.setObjectName("colorButton_4_9")
-        self.gridLayout.addWidget(self.colorButton_4_9, 4, 9, 1, 1)
-        self.colorButton_0_2 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_0_2.setMouseTracking(True)
-        self.colorButton_0_2.setToolTipDuration(2500)
-        self.colorButton_0_2.setAutoFillBackground(False)
-        self.colorButton_0_2.setStyleSheet("QPushButton {\n"
-"    background-color: #4B0082;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_0_2.setText("")
-        self.colorButton_0_2.setCheckable(True)
-        self.colorButton_0_2.setChecked(False)
-        self.colorButton_0_2.setObjectName("colorButton_0_2")
-        self.gridLayout.addWidget(self.colorButton_0_2, 0, 2, 1, 1)
-        self.colorButton_0_3 = QtWidgets.QPushButton(self.layoutWidget)
-        self.colorButton_0_3.setMouseTracking(True)
-        self.colorButton_0_3.setToolTipDuration(2500)
-        self.colorButton_0_3.setAutoFillBackground(False)
-        self.colorButton_0_3.setStyleSheet("QPushButton {\n"
-"    background-color: #006A4E;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_0_3.setText("")
-        self.colorButton_0_3.setCheckable(True)
-        self.colorButton_0_3.setChecked(False)
-        self.colorButton_0_3.setObjectName("colorButton_0_3")
-        self.gridLayout.addWidget(self.colorButton_0_3, 0, 3, 1, 1)
-        self.label_13 = QtWidgets.QLabel(self.w_GameOfLife)
-        self.label_13.setEnabled(False)
-        self.label_13.setGeometry(QtCore.QRect(90, 10, 361, 20))
+        self.colorButton_0_71.setText("")
+        self.colorButton_0_71.setCheckable(True)
+        self.colorButton_0_71.setChecked(False)
+        self.colorButton_0_71.setObjectName("colorButton_0_71")
+        self.label_17 = QtWidgets.QLabel(self.GameOfLife)
+        self.label_17.setEnabled(False)
+        self.label_17.setGeometry(QtCore.QRect(610, 620, 361, 20))
         font = QtGui.QFont()
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
-        self.label_13.setFont(font)
-        self.label_13.setStyleSheet("background:transparent;\n"
+        self.label_17.setFont(font)
+        self.label_17.setStyleSheet("background:transparent;\n"
 "color:white;\n"
 "font-weight:bold;\n"
 "border:none;")
-        self.label_13.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_13.setObjectName("label_13")
-        self.label = QtWidgets.QLabel(self.GameOfLife)
-        self.label.setGeometry(QtCore.QRect(10, 10, 16, 16))
-        self.label.setObjectName("label")
+        self.label_17.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_17.setObjectName("label_17")
         self.stackedWidget.addWidget(self.GameOfLife)
         self.NoisePerlin = QtWidgets.QWidget()
         self.NoisePerlin.setObjectName("NoisePerlin")
@@ -1309,12 +493,12 @@ class Ui_MainMenu(object):
 "color:white;\n"
 "")
         self.b_SaveProcImage1.setObjectName("b_SaveProcImage1")
-        self.w_NoisePerlin = QtWidgets.QWidget(self.NoisePerlin)
-        self.w_NoisePerlin.setGeometry(QtCore.QRect(30, 610, 741, 241))
-        self.w_NoisePerlin.setStyleSheet("border: 2px solid rgba(235, 225, 225, 0.9);")
-        self.w_NoisePerlin.setObjectName("w_NoisePerlin")
-        self.b_processImageNP = QtWidgets.QPushButton(self.w_NoisePerlin)
-        self.b_processImageNP.setGeometry(QtCore.QRect(540, 80, 171, 41))
+        self.label_2 = QtWidgets.QLabel(self.NoisePerlin)
+        self.label_2.setGeometry(QtCore.QRect(10, 10, 16, 16))
+        self.label_2.setStyleSheet("background:transparent;")
+        self.label_2.setObjectName("label_2")
+        self.b_processImageNP = QtWidgets.QPushButton(self.NoisePerlin)
+        self.b_processImageNP.setGeometry(QtCore.QRect(706, 790, 171, 41))
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
         brush.setStyle(QtCore.Qt.SolidPattern)
@@ -1406,22 +590,10 @@ class Ui_MainMenu(object):
 "    text-decoration: underline;\n"
 "}")
         self.b_processImageNP.setObjectName("b_processImageNP")
-        self.layoutWidget_3 = QtWidgets.QWidget(self.w_NoisePerlin)
-        self.layoutWidget_3.setGeometry(QtCore.QRect(37, 41, 461, 161))
-        self.layoutWidget_3.setObjectName("layoutWidget_3")
-        self.gridLayout_3 = QtWidgets.QGridLayout(self.layoutWidget_3)
-        self.gridLayout_3.setSizeConstraint(QtWidgets.QLayout.SetDefaultConstraint)
-        self.gridLayout_3.setContentsMargins(6, 0, 6, 0)
-        self.gridLayout_3.setHorizontalSpacing(4)
-        self.gridLayout_3.setVerticalSpacing(5)
-        self.gridLayout_3.setObjectName("gridLayout_3")
-        self.colorButton_0_40 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_0_40.setMouseTracking(True)
-        self.colorButton_0_40.setToolTipDuration(2500)
-        self.colorButton_0_40.setAutoFillBackground(False)
-        self.colorButton_0_40.setStyleSheet("QPushButton {\n"
-"    background-color: #000000;\n"
-"    border: none;\n"
+        self.pushButton_4 = QtWidgets.QPushButton(self.NoisePerlin)
+        self.pushButton_4.setGeometry(QtCore.QRect(425, 681, 241, 91))
+        self.pushButton_4.setStyleSheet("QPushButton {\n"
+"    border: 0.5px solid white;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
@@ -1429,19 +601,72 @@ class Ui_MainMenu(object):
 "}\n"
 "\n"
 "QPushButton:checked {\n"
-"    border: 3px solid black;\n"
+"    background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0,\n"
+"    stop:0 rgba(70, 35, 105, 200),\n"
+"    stop:0.427447 rgba(60, 75, 135, 200),\n"
+"    stop:1 rgba(120, 75, 135, 220));\n"
+"}")
+        self.pushButton_4.setText("")
+        self.pushButton_4.setCheckable(True)
+        self.pushButton_4.setObjectName("pushButton_4")
+        self.pushButton_5 = QtWidgets.QPushButton(self.NoisePerlin)
+        self.pushButton_5.setGeometry(QtCore.QRect(676, 681, 241, 91))
+        self.pushButton_5.setStyleSheet("QPushButton {\n"
+"    border: 0.5px solid white;\n"
 "}\n"
-"")
-        self.colorButton_0_40.setText("")
-        self.colorButton_0_40.setCheckable(True)
-        self.colorButton_0_40.setChecked(False)
-        self.colorButton_0_40.setObjectName("colorButton_0_40")
-        self.gridLayout_3.addWidget(self.colorButton_0_40, 0, 0, 1, 1)
-        self.colorButton_0_41 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_0_41.setMouseTracking(True)
-        self.colorButton_0_41.setToolTipDuration(2500)
-        self.colorButton_0_41.setAutoFillBackground(False)
-        self.colorButton_0_41.setStyleSheet("QPushButton {\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 3px solid white;\n"
+"}\n"
+"\n"
+"QPushButton:checked {\n"
+"    background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0,\n"
+"    stop:0 rgba(70, 35, 105, 200),\n"
+"    stop:0.427447 rgba(60, 75, 135, 200),\n"
+"    stop:1 rgba(120, 75, 135, 220));\n"
+"}")
+        self.pushButton_5.setText("")
+        self.pushButton_5.setCheckable(True)
+        self.pushButton_5.setObjectName("pushButton_5")
+        self.pushButton_6 = QtWidgets.QPushButton(self.NoisePerlin)
+        self.pushButton_6.setGeometry(QtCore.QRect(927, 681, 241, 91))
+        self.pushButton_6.setStyleSheet("QPushButton {\n"
+"    border: 0.5px solid white;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 3px solid white;\n"
+"}\n"
+"\n"
+"QPushButton:checked {\n"
+"    background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0,\n"
+"    stop:0 rgba(70, 35, 105, 200),\n"
+"    stop:0.427447 rgba(60, 75, 135, 200),\n"
+"    stop:1 rgba(120, 75, 135, 220));\n"
+"}")
+        self.pushButton_6.setText("")
+        self.pushButton_6.setCheckable(True)
+        self.pushButton_6.setObjectName("pushButton_6")
+        self.label_16 = QtWidgets.QLabel(self.NoisePerlin)
+        self.label_16.setEnabled(False)
+        self.label_16.setGeometry(QtCore.QRect(610, 620, 361, 20))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_16.setFont(font)
+        self.label_16.setStyleSheet("background:transparent;\n"
+"color:white;\n"
+"font-weight:bold;\n"
+"border:none;")
+        self.label_16.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_16.setObjectName("label_16")
+        self.colorButton_0_63 = QtWidgets.QPushButton(self.NoisePerlin)
+        self.colorButton_0_63.setGeometry(QtCore.QRect(525, 690, 42, 16))
+        self.colorButton_0_63.setMouseTracking(True)
+        self.colorButton_0_63.setToolTipDuration(2500)
+        self.colorButton_0_63.setAutoFillBackground(False)
+        self.colorButton_0_63.setStyleSheet("QPushButton {\n"
 "    background-color: #364135;\n"
 "    border: none;\n"
 "}\n"
@@ -1456,40 +681,19 @@ class Ui_MainMenu(object):
 "    border: 3px solid black;\n"
 "}\n"
 "")
-        self.colorButton_0_41.setText("")
-        self.colorButton_0_41.setCheckable(True)
-        self.colorButton_0_41.setChecked(False)
-        self.colorButton_0_41.setObjectName("colorButton_0_41")
-        self.gridLayout_3.addWidget(self.colorButton_0_41, 0, 1, 1, 1)
-        self.colorButton_0_42 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_0_42.setMouseTracking(True)
-        self.colorButton_0_42.setToolTipDuration(2500)
-        self.colorButton_0_42.setAutoFillBackground(False)
-        self.colorButton_0_42.setStyleSheet("QPushButton {\n"
-"    background-color: #9B111E;\n"
+        self.colorButton_0_63.setText("")
+        self.colorButton_0_63.setCheckable(True)
+        self.colorButton_0_63.setChecked(False)
+        self.colorButton_0_63.setObjectName("colorButton_0_63")
+        self.colorButton_0_64 = QtWidgets.QPushButton(self.NoisePerlin)
+        self.colorButton_0_64.setGeometry(QtCore.QRect(571, 690, 41, 16))
+        self.colorButton_0_64.setMouseTracking(True)
+        self.colorButton_0_64.setToolTipDuration(2500)
+        self.colorButton_0_64.setAutoFillBackground(False)
+        self.colorButton_0_64.setStyleSheet("QPushButton {\n"
+"    background-color: #4B0082;\n"
 "    border: none;\n"
 "}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_0_42.setText("")
-        self.colorButton_0_42.setCheckable(True)
-        self.colorButton_0_42.setChecked(False)
-        self.colorButton_0_42.setObjectName("colorButton_0_42")
-        self.gridLayout_3.addWidget(self.colorButton_0_42, 0, 4, 1, 1)
-        self.colorButton_0_43 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_0_43.setMouseTracking(True)
-        self.colorButton_0_43.setToolTipDuration(2500)
-        self.colorButton_0_43.setAutoFillBackground(False)
-        self.colorButton_0_43.setStyleSheet("QPushButton {\n"
-"    background-color: #FFA500;\n"
-"    border: none;\n"
-"}\n"
-"\n"
 "\n"
 "QPushButton:hover {\n"
 "    border: 3px solid white;\n"
@@ -1499,17 +703,39 @@ class Ui_MainMenu(object):
 "    border: 3px solid black;\n"
 "}\n"
 "")
-        self.colorButton_0_43.setText("")
-        self.colorButton_0_43.setCheckable(True)
-        self.colorButton_0_43.setChecked(False)
-        self.colorButton_0_43.setObjectName("colorButton_0_43")
-        self.gridLayout_3.addWidget(self.colorButton_0_43, 0, 5, 1, 1)
-        self.colorButton_0_44 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_0_44.setMouseTracking(True)
-        self.colorButton_0_44.setToolTipDuration(2500)
-        self.colorButton_0_44.setAutoFillBackground(False)
-        self.colorButton_0_44.setStyleSheet("QPushButton {\n"
-"    background-color: #FFC0CB;\n"
+        self.colorButton_0_64.setText("")
+        self.colorButton_0_64.setCheckable(True)
+        self.colorButton_0_64.setChecked(False)
+        self.colorButton_0_64.setObjectName("colorButton_0_64")
+        self.colorButton_0_65 = QtWidgets.QPushButton(self.NoisePerlin)
+        self.colorButton_0_65.setGeometry(QtCore.QRect(480, 690, 41, 16))
+        self.colorButton_0_65.setMouseTracking(True)
+        self.colorButton_0_65.setToolTipDuration(2500)
+        self.colorButton_0_65.setAutoFillBackground(False)
+        self.colorButton_0_65.setStyleSheet("QPushButton {\n"
+"    background-color: #000000;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 3px solid white;\n"
+"}\n"
+"\n"
+"QPushButton:checked {\n"
+"    border: 3px solid black;\n"
+"}\n"
+"")
+        self.colorButton_0_65.setText("")
+        self.colorButton_0_65.setCheckable(True)
+        self.colorButton_0_65.setChecked(False)
+        self.colorButton_0_65.setObjectName("colorButton_0_65")
+        self.colorButton_3_63 = QtWidgets.QPushButton(self.NoisePerlin)
+        self.colorButton_3_63.setGeometry(QtCore.QRect(775, 690, 41, 16))
+        self.colorButton_3_63.setMouseTracking(True)
+        self.colorButton_3_63.setToolTipDuration(2500)
+        self.colorButton_3_63.setAutoFillBackground(False)
+        self.colorButton_3_63.setStyleSheet("QPushButton {\n"
+"    background-color: #4B0082;\n"
 "    border: none;\n"
 "}\n"
 "QPushButton:hover {\n"
@@ -1519,16 +745,56 @@ class Ui_MainMenu(object):
 "    border: 3px solid black;\n"
 "}\n"
 "")
-        self.colorButton_0_44.setText("")
-        self.colorButton_0_44.setCheckable(True)
-        self.colorButton_0_44.setChecked(False)
-        self.colorButton_0_44.setObjectName("colorButton_0_44")
-        self.gridLayout_3.addWidget(self.colorButton_0_44, 0, 6, 1, 1)
-        self.colorButton_0_45 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_0_45.setMouseTracking(True)
-        self.colorButton_0_45.setToolTipDuration(2500)
-        self.colorButton_0_45.setAutoFillBackground(False)
-        self.colorButton_0_45.setStyleSheet("QPushButton {\n"
+        self.colorButton_3_63.setText("")
+        self.colorButton_3_63.setCheckable(True)
+        self.colorButton_3_63.setChecked(False)
+        self.colorButton_3_63.setObjectName("colorButton_3_63")
+        self.colorButton_3_64 = QtWidgets.QPushButton(self.NoisePerlin)
+        self.colorButton_3_64.setGeometry(QtCore.QRect(820, 690, 42, 16))
+        self.colorButton_3_64.setMouseTracking(True)
+        self.colorButton_3_64.setToolTipDuration(2500)
+        self.colorButton_3_64.setAutoFillBackground(False)
+        self.colorButton_3_64.setStyleSheet("QPushButton {\n"
+"    background-color: #C71585;\n"
+"    border: none;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    border: 3px solid white;\n"
+"}\n"
+"QPushButton:checked {\n"
+"    border: 3px solid black;\n"
+"}\n"
+"")
+        self.colorButton_3_64.setText("")
+        self.colorButton_3_64.setCheckable(True)
+        self.colorButton_3_64.setChecked(False)
+        self.colorButton_3_64.setObjectName("colorButton_3_64")
+        self.colorButton_3_65 = QtWidgets.QPushButton(self.NoisePerlin)
+        self.colorButton_3_65.setGeometry(QtCore.QRect(730, 690, 41, 16))
+        self.colorButton_3_65.setMouseTracking(True)
+        self.colorButton_3_65.setToolTipDuration(2500)
+        self.colorButton_3_65.setAutoFillBackground(False)
+        self.colorButton_3_65.setStyleSheet("QPushButton {\n"
+"    background-color: #0F52BA;\n"
+"    border: none;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    border: 3px solid white;\n"
+"}\n"
+"QPushButton:checked {\n"
+"    border: 3px solid black;\n"
+"}\n"
+"")
+        self.colorButton_3_65.setText("")
+        self.colorButton_3_65.setCheckable(True)
+        self.colorButton_3_65.setChecked(False)
+        self.colorButton_3_65.setObjectName("colorButton_3_65")
+        self.colorButton_0_57 = QtWidgets.QPushButton(self.NoisePerlin)
+        self.colorButton_0_57.setGeometry(QtCore.QRect(1025, 690, 41, 16))
+        self.colorButton_0_57.setMouseTracking(True)
+        self.colorButton_0_57.setToolTipDuration(2500)
+        self.colorButton_0_57.setAutoFillBackground(False)
+        self.colorButton_0_57.setStyleSheet("QPushButton {\n"
 "    background-color: #7FFFD4;\n"
 "    border: none;\n"
 "}\n"
@@ -1541,16 +807,16 @@ class Ui_MainMenu(object):
 "    border: 3px solid black;\n"
 "}\n"
 "")
-        self.colorButton_0_45.setText("")
-        self.colorButton_0_45.setCheckable(True)
-        self.colorButton_0_45.setChecked(False)
-        self.colorButton_0_45.setObjectName("colorButton_0_45")
-        self.gridLayout_3.addWidget(self.colorButton_0_45, 0, 7, 1, 1)
-        self.colorButton_0_46 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_0_46.setMouseTracking(True)
-        self.colorButton_0_46.setToolTipDuration(2500)
-        self.colorButton_0_46.setAutoFillBackground(False)
-        self.colorButton_0_46.setStyleSheet("QPushButton {\n"
+        self.colorButton_0_57.setText("")
+        self.colorButton_0_57.setCheckable(True)
+        self.colorButton_0_57.setChecked(False)
+        self.colorButton_0_57.setObjectName("colorButton_0_57")
+        self.colorButton_0_58 = QtWidgets.QPushButton(self.NoisePerlin)
+        self.colorButton_0_58.setGeometry(QtCore.QRect(1070, 690, 42, 16))
+        self.colorButton_0_58.setMouseTracking(True)
+        self.colorButton_0_58.setToolTipDuration(2500)
+        self.colorButton_0_58.setAutoFillBackground(False)
+        self.colorButton_0_58.setStyleSheet("QPushButton {\n"
 "    background-color: #90EE90;\n"
 "    border: none;\n"
 "}\n"
@@ -1561,149 +827,17 @@ class Ui_MainMenu(object):
 "    border: 3px solid black;\n"
 "}\n"
 "")
-        self.colorButton_0_46.setText("")
-        self.colorButton_0_46.setCheckable(True)
-        self.colorButton_0_46.setChecked(False)
-        self.colorButton_0_46.setObjectName("colorButton_0_46")
-        self.gridLayout_3.addWidget(self.colorButton_0_46, 0, 8, 1, 1)
-        self.colorButton_0_47 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_0_47.setMouseTracking(True)
-        self.colorButton_0_47.setToolTipDuration(2500)
-        self.colorButton_0_47.setAutoFillBackground(False)
-        self.colorButton_0_47.setStyleSheet("QPushButton {\n"
-"    background-color: #FFFDD0;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_0_47.setText("")
-        self.colorButton_0_47.setCheckable(True)
-        self.colorButton_0_47.setChecked(False)
-        self.colorButton_0_47.setObjectName("colorButton_0_47")
-        self.gridLayout_3.addWidget(self.colorButton_0_47, 0, 9, 1, 1)
-        self.colorButton_1_40 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_1_40.setMouseTracking(True)
-        self.colorButton_1_40.setToolTipDuration(2500)
-        self.colorButton_1_40.setAutoFillBackground(False)
-        self.colorButton_1_40.setStyleSheet("QPushButton {\n"
-"    background-color: #2F2F2F;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"/* Коли кнопка в стані наведення */\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"/* Коли кнопка натиснута й активна */\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_1_40.setText("")
-        self.colorButton_1_40.setCheckable(True)
-        self.colorButton_1_40.setChecked(False)
-        self.colorButton_1_40.setObjectName("colorButton_1_40")
-        self.gridLayout_3.addWidget(self.colorButton_1_40, 1, 0, 1, 1)
-        self.colorButton_1_41 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_1_41.setMouseTracking(True)
-        self.colorButton_1_41.setToolTipDuration(2500)
-        self.colorButton_1_41.setAutoFillBackground(False)
-        self.colorButton_1_41.setStyleSheet("QPushButton {\n"
-"    background-color: #3B2F2F;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_1_41.setText("")
-        self.colorButton_1_41.setCheckable(True)
-        self.colorButton_1_41.setChecked(False)
-        self.colorButton_1_41.setObjectName("colorButton_1_41")
-        self.gridLayout_3.addWidget(self.colorButton_1_41, 1, 1, 1, 1)
-        self.colorButton_1_42 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_1_42.setMouseTracking(True)
-        self.colorButton_1_42.setToolTipDuration(2500)
-        self.colorButton_1_42.setAutoFillBackground(False)
-        self.colorButton_1_42.setStyleSheet("QPushButton {\n"
-"    background-color: #008080;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_1_42.setText("")
-        self.colorButton_1_42.setCheckable(True)
-        self.colorButton_1_42.setChecked(False)
-        self.colorButton_1_42.setObjectName("colorButton_1_42")
-        self.gridLayout_3.addWidget(self.colorButton_1_42, 1, 2, 1, 1)
-        self.colorButton_1_43 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_1_43.setMouseTracking(True)
-        self.colorButton_1_43.setToolTipDuration(2500)
-        self.colorButton_1_43.setAutoFillBackground(False)
-        self.colorButton_1_43.setStyleSheet("QPushButton {\n"
-"    background-color:#006D77;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_1_43.setText("")
-        self.colorButton_1_43.setCheckable(True)
-        self.colorButton_1_43.setChecked(False)
-        self.colorButton_1_43.setObjectName("colorButton_1_43")
-        self.gridLayout_3.addWidget(self.colorButton_1_43, 1, 3, 1, 1)
-        self.colorButton_1_44 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_1_44.setMouseTracking(True)
-        self.colorButton_1_44.setToolTipDuration(2500)
-        self.colorButton_1_44.setAutoFillBackground(False)
-        self.colorButton_1_44.setStyleSheet("QPushButton {\n"
-"    background-color: #A52A2A;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_1_44.setText("")
-        self.colorButton_1_44.setCheckable(True)
-        self.colorButton_1_44.setChecked(False)
-        self.colorButton_1_44.setObjectName("colorButton_1_44")
-        self.gridLayout_3.addWidget(self.colorButton_1_44, 1, 4, 1, 1)
-        self.colorButton_1_45 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_1_45.setMouseTracking(True)
-        self.colorButton_1_45.setToolTipDuration(2500)
-        self.colorButton_1_45.setAutoFillBackground(False)
-        self.colorButton_1_45.setStyleSheet("QPushButton {\n"
-"    background-color: #FF0000;\n"
+        self.colorButton_0_58.setText("")
+        self.colorButton_0_58.setCheckable(True)
+        self.colorButton_0_58.setChecked(False)
+        self.colorButton_0_58.setObjectName("colorButton_0_58")
+        self.colorButton_0_59 = QtWidgets.QPushButton(self.NoisePerlin)
+        self.colorButton_0_59.setGeometry(QtCore.QRect(980, 690, 41, 16))
+        self.colorButton_0_59.setMouseTracking(True)
+        self.colorButton_0_59.setToolTipDuration(2500)
+        self.colorButton_0_59.setAutoFillBackground(False)
+        self.colorButton_0_59.setStyleSheet("QPushButton {\n"
+"    background-color: #FFC0CB;\n"
 "    border: none;\n"
 "}\n"
 "QPushButton:hover {\n"
@@ -1713,778 +847,10 @@ class Ui_MainMenu(object):
 "    border: 3px solid black;\n"
 "}\n"
 "")
-        self.colorButton_1_45.setText("")
-        self.colorButton_1_45.setCheckable(True)
-        self.colorButton_1_45.setChecked(False)
-        self.colorButton_1_45.setObjectName("colorButton_1_45")
-        self.gridLayout_3.addWidget(self.colorButton_1_45, 1, 5, 1, 1)
-        self.colorButton_1_46 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_1_46.setMouseTracking(True)
-        self.colorButton_1_46.setToolTipDuration(2500)
-        self.colorButton_1_46.setAutoFillBackground(False)
-        self.colorButton_1_46.setStyleSheet("QPushButton {\n"
-"    background-color: #DC143C;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_1_46.setText("")
-        self.colorButton_1_46.setCheckable(True)
-        self.colorButton_1_46.setChecked(False)
-        self.colorButton_1_46.setObjectName("colorButton_1_46")
-        self.gridLayout_3.addWidget(self.colorButton_1_46, 1, 6, 1, 1)
-        self.colorButton_1_47 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_1_47.setMouseTracking(True)
-        self.colorButton_1_47.setToolTipDuration(2500)
-        self.colorButton_1_47.setAutoFillBackground(False)
-        self.colorButton_1_47.setStyleSheet("QPushButton {\n"
-"    background-color: #87CEFA;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_1_47.setText("")
-        self.colorButton_1_47.setCheckable(True)
-        self.colorButton_1_47.setChecked(False)
-        self.colorButton_1_47.setObjectName("colorButton_1_47")
-        self.gridLayout_3.addWidget(self.colorButton_1_47, 1, 7, 1, 1)
-        self.colorButton_1_48 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_1_48.setMouseTracking(True)
-        self.colorButton_1_48.setToolTipDuration(2500)
-        self.colorButton_1_48.setAutoFillBackground(False)
-        self.colorButton_1_48.setStyleSheet("QPushButton {\n"
-"    background-color: #FFFFE0;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_1_48.setText("")
-        self.colorButton_1_48.setCheckable(True)
-        self.colorButton_1_48.setChecked(False)
-        self.colorButton_1_48.setObjectName("colorButton_1_48")
-        self.gridLayout_3.addWidget(self.colorButton_1_48, 1, 8, 1, 1)
-        self.colorButton_1_49 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_1_49.setMouseTracking(True)
-        self.colorButton_1_49.setToolTipDuration(2500)
-        self.colorButton_1_49.setAutoFillBackground(False)
-        self.colorButton_1_49.setStyleSheet("QPushButton {\n"
-"    background-color: #F5F5F5;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_1_49.setText("")
-        self.colorButton_1_49.setCheckable(True)
-        self.colorButton_1_49.setChecked(False)
-        self.colorButton_1_49.setObjectName("colorButton_1_49")
-        self.gridLayout_3.addWidget(self.colorButton_1_49, 1, 9, 1, 1)
-        self.colorButton_2_40 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_2_40.setMouseTracking(True)
-        self.colorButton_2_40.setToolTipDuration(2500)
-        self.colorButton_2_40.setAutoFillBackground(False)
-        self.colorButton_2_40.setStyleSheet("QPushButton {\n"
-"    background-color: #36454F;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"/* Коли кнопка в стані наведення */\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"/* Коли кнопка натиснута й активна */\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_2_40.setText("")
-        self.colorButton_2_40.setCheckable(True)
-        self.colorButton_2_40.setChecked(False)
-        self.colorButton_2_40.setObjectName("colorButton_2_40")
-        self.gridLayout_3.addWidget(self.colorButton_2_40, 2, 0, 1, 1)
-        self.colorButton_2_41 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_2_41.setMouseTracking(True)
-        self.colorButton_2_41.setToolTipDuration(2500)
-        self.colorButton_2_41.setAutoFillBackground(False)
-        self.colorButton_2_41.setStyleSheet("QPushButton {\n"
-"    background-color: #301934;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_2_41.setText("")
-        self.colorButton_2_41.setCheckable(True)
-        self.colorButton_2_41.setChecked(False)
-        self.colorButton_2_41.setObjectName("colorButton_2_41")
-        self.gridLayout_3.addWidget(self.colorButton_2_41, 2, 1, 1, 1)
-        self.colorButton_2_42 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_2_42.setMouseTracking(True)
-        self.colorButton_2_42.setToolTipDuration(2500)
-        self.colorButton_2_42.setAutoFillBackground(False)
-        self.colorButton_2_42.setStyleSheet("QPushButton {\n"
-"    background-color: #485320;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_2_42.setText("")
-        self.colorButton_2_42.setCheckable(True)
-        self.colorButton_2_42.setChecked(False)
-        self.colorButton_2_42.setObjectName("colorButton_2_42")
-        self.gridLayout_3.addWidget(self.colorButton_2_42, 2, 2, 1, 1)
-        self.colorButton_2_43 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_2_43.setMouseTracking(True)
-        self.colorButton_2_43.setToolTipDuration(2500)
-        self.colorButton_2_43.setAutoFillBackground(False)
-        self.colorButton_2_43.setStyleSheet("QPushButton {\n"
-"    background-color: #191970;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_2_43.setText("")
-        self.colorButton_2_43.setCheckable(True)
-        self.colorButton_2_43.setChecked(False)
-        self.colorButton_2_43.setObjectName("colorButton_2_43")
-        self.gridLayout_3.addWidget(self.colorButton_2_43, 2, 3, 1, 1)
-        self.colorButton_2_44 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_2_44.setMouseTracking(True)
-        self.colorButton_2_44.setToolTipDuration(2500)
-        self.colorButton_2_44.setAutoFillBackground(False)
-        self.colorButton_2_44.setStyleSheet("QPushButton {\n"
-"    background-color: #C04000;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_2_44.setText("")
-        self.colorButton_2_44.setCheckable(True)
-        self.colorButton_2_44.setChecked(False)
-        self.colorButton_2_44.setObjectName("colorButton_2_44")
-        self.gridLayout_3.addWidget(self.colorButton_2_44, 2, 4, 1, 1)
-        self.colorButton_2_45 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_2_45.setMouseTracking(True)
-        self.colorButton_2_45.setToolTipDuration(2500)
-        self.colorButton_2_45.setAutoFillBackground(False)
-        self.colorButton_2_45.setStyleSheet("QPushButton {\n"
-"    background-color: #800080;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_2_45.setText("")
-        self.colorButton_2_45.setCheckable(True)
-        self.colorButton_2_45.setChecked(False)
-        self.colorButton_2_45.setObjectName("colorButton_2_45")
-        self.gridLayout_3.addWidget(self.colorButton_2_45, 2, 5, 1, 1)
-        self.colorButton_2_46 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_2_46.setMouseTracking(True)
-        self.colorButton_2_46.setToolTipDuration(2500)
-        self.colorButton_2_46.setAutoFillBackground(False)
-        self.colorButton_2_46.setStyleSheet("QPushButton {\n"
-"    background-color: #00FF00;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_2_46.setText("")
-        self.colorButton_2_46.setCheckable(True)
-        self.colorButton_2_46.setChecked(False)
-        self.colorButton_2_46.setObjectName("colorButton_2_46")
-        self.gridLayout_3.addWidget(self.colorButton_2_46, 2, 6, 1, 1)
-        self.colorButton_2_47 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_2_47.setMouseTracking(True)
-        self.colorButton_2_47.setToolTipDuration(2500)
-        self.colorButton_2_47.setAutoFillBackground(False)
-        self.colorButton_2_47.setStyleSheet("QPushButton {\n"
-"    background-color: #87CEEB;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_2_47.setText("")
-        self.colorButton_2_47.setCheckable(True)
-        self.colorButton_2_47.setChecked(False)
-        self.colorButton_2_47.setObjectName("colorButton_2_47")
-        self.gridLayout_3.addWidget(self.colorButton_2_47, 2, 7, 1, 1)
-        self.colorButton_2_48 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_2_48.setMouseTracking(True)
-        self.colorButton_2_48.setToolTipDuration(2500)
-        self.colorButton_2_48.setAutoFillBackground(False)
-        self.colorButton_2_48.setStyleSheet("QPushButton {\n"
-"    background-color: #FFFF00;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_2_48.setText("")
-        self.colorButton_2_48.setCheckable(True)
-        self.colorButton_2_48.setChecked(False)
-        self.colorButton_2_48.setObjectName("colorButton_2_48")
-        self.gridLayout_3.addWidget(self.colorButton_2_48, 2, 8, 1, 1)
-        self.colorButton_2_49 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_2_49.setMouseTracking(True)
-        self.colorButton_2_49.setToolTipDuration(2500)
-        self.colorButton_2_49.setAutoFillBackground(False)
-        self.colorButton_2_49.setStyleSheet("QPushButton {\n"
-"    background-color: #D3D3D3;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_2_49.setText("")
-        self.colorButton_2_49.setCheckable(True)
-        self.colorButton_2_49.setChecked(False)
-        self.colorButton_2_49.setObjectName("colorButton_2_49")
-        self.gridLayout_3.addWidget(self.colorButton_2_49, 2, 9, 1, 1)
-        self.colorButton_3_40 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_3_40.setMouseTracking(True)
-        self.colorButton_3_40.setToolTipDuration(2500)
-        self.colorButton_3_40.setAutoFillBackground(False)
-        self.colorButton_3_40.setStyleSheet("QPushButton {\n"
-"    background-color: #00008B;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"/* Коли кнопка в стані наведення */\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"/* Коли кнопка натиснута й активна */\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_3_40.setText("")
-        self.colorButton_3_40.setCheckable(True)
-        self.colorButton_3_40.setChecked(False)
-        self.colorButton_3_40.setObjectName("colorButton_3_40")
-        self.gridLayout_3.addWidget(self.colorButton_3_40, 3, 0, 1, 1)
-        self.colorButton_3_41 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_3_41.setMouseTracking(True)
-        self.colorButton_3_41.setToolTipDuration(2500)
-        self.colorButton_3_41.setAutoFillBackground(False)
-        self.colorButton_3_41.setStyleSheet("QPushButton {\n"
-"    background-color: #3B3C36;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_3_41.setText("")
-        self.colorButton_3_41.setCheckable(True)
-        self.colorButton_3_41.setChecked(False)
-        self.colorButton_3_41.setObjectName("colorButton_3_41")
-        self.gridLayout_3.addWidget(self.colorButton_3_41, 3, 1, 1, 1)
-        self.colorButton_3_42 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_3_42.setMouseTracking(True)
-        self.colorButton_3_42.setToolTipDuration(2500)
-        self.colorButton_3_42.setAutoFillBackground(False)
-        self.colorButton_3_42.setStyleSheet("QPushButton {\n"
-"    background-color: #228B22;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_3_42.setText("")
-        self.colorButton_3_42.setCheckable(True)
-        self.colorButton_3_42.setChecked(False)
-        self.colorButton_3_42.setObjectName("colorButton_3_42")
-        self.gridLayout_3.addWidget(self.colorButton_3_42, 3, 2, 1, 1)
-        self.colorButton_3_43 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_3_43.setMouseTracking(True)
-        self.colorButton_3_43.setToolTipDuration(2500)
-        self.colorButton_3_43.setAutoFillBackground(False)
-        self.colorButton_3_43.setStyleSheet("QPushButton {\n"
-"    background-color: #0F52BA;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_3_43.setText("")
-        self.colorButton_3_43.setCheckable(True)
-        self.colorButton_3_43.setChecked(False)
-        self.colorButton_3_43.setObjectName("colorButton_3_43")
-        self.gridLayout_3.addWidget(self.colorButton_3_43, 3, 3, 1, 1)
-        self.colorButton_3_44 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_3_44.setMouseTracking(True)
-        self.colorButton_3_44.setToolTipDuration(2500)
-        self.colorButton_3_44.setAutoFillBackground(False)
-        self.colorButton_3_44.setStyleSheet("QPushButton {\n"
-"    background-color: #4B0082;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_3_44.setText("")
-        self.colorButton_3_44.setCheckable(True)
-        self.colorButton_3_44.setChecked(False)
-        self.colorButton_3_44.setObjectName("colorButton_3_44")
-        self.gridLayout_3.addWidget(self.colorButton_3_44, 3, 4, 1, 1)
-        self.colorButton_3_45 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_3_45.setMouseTracking(True)
-        self.colorButton_3_45.setToolTipDuration(2500)
-        self.colorButton_3_45.setAutoFillBackground(False)
-        self.colorButton_3_45.setStyleSheet("QPushButton {\n"
-"    background-color: #C71585;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_3_45.setText("")
-        self.colorButton_3_45.setCheckable(True)
-        self.colorButton_3_45.setChecked(False)
-        self.colorButton_3_45.setObjectName("colorButton_3_45")
-        self.gridLayout_3.addWidget(self.colorButton_3_45, 3, 5, 1, 1)
-        self.colorButton_3_46 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_3_46.setMouseTracking(True)
-        self.colorButton_3_46.setToolTipDuration(2500)
-        self.colorButton_3_46.setAutoFillBackground(False)
-        self.colorButton_3_46.setStyleSheet("QPushButton {\n"
-"    background-color: #00FF7F;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_3_46.setText("")
-        self.colorButton_3_46.setCheckable(True)
-        self.colorButton_3_46.setChecked(False)
-        self.colorButton_3_46.setObjectName("colorButton_3_46")
-        self.gridLayout_3.addWidget(self.colorButton_3_46, 3, 6, 1, 1)
-        self.colorButton_3_47 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_3_47.setMouseTracking(True)
-        self.colorButton_3_47.setToolTipDuration(2500)
-        self.colorButton_3_47.setAutoFillBackground(False)
-        self.colorButton_3_47.setStyleSheet("QPushButton {\n"
-"    background-color: #0000FF;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_3_47.setText("")
-        self.colorButton_3_47.setCheckable(True)
-        self.colorButton_3_47.setChecked(False)
-        self.colorButton_3_47.setObjectName("colorButton_3_47")
-        self.gridLayout_3.addWidget(self.colorButton_3_47, 3, 7, 1, 1)
-        self.colorButton_3_48 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_3_48.setMouseTracking(True)
-        self.colorButton_3_48.setToolTipDuration(2500)
-        self.colorButton_3_48.setAutoFillBackground(False)
-        self.colorButton_3_48.setStyleSheet("QPushButton {\n"
-"    background-color: #FFD700;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_3_48.setText("")
-        self.colorButton_3_48.setCheckable(True)
-        self.colorButton_3_48.setChecked(False)
-        self.colorButton_3_48.setObjectName("colorButton_3_48")
-        self.gridLayout_3.addWidget(self.colorButton_3_48, 3, 8, 1, 1)
-        self.colorButton_3_49 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_3_49.setMouseTracking(True)
-        self.colorButton_3_49.setToolTipDuration(2500)
-        self.colorButton_3_49.setAutoFillBackground(False)
-        self.colorButton_3_49.setStyleSheet("QPushButton {\n"
-"    background-color: #C0C0C0;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_3_49.setText("")
-        self.colorButton_3_49.setCheckable(True)
-        self.colorButton_3_49.setChecked(False)
-        self.colorButton_3_49.setObjectName("colorButton_3_49")
-        self.gridLayout_3.addWidget(self.colorButton_3_49, 3, 9, 1, 1)
-        self.colorButton_4_40 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_4_40.setMouseTracking(True)
-        self.colorButton_4_40.setToolTipDuration(2500)
-        self.colorButton_4_40.setAutoFillBackground(False)
-        self.colorButton_4_40.setStyleSheet("QPushButton {\n"
-"    background-color:#013220;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"/* Коли кнопка в стані наведення */\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"/* Коли кнопка натиснута й активна */\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_4_40.setText("")
-        self.colorButton_4_40.setCheckable(True)
-        self.colorButton_4_40.setChecked(False)
-        self.colorButton_4_40.setObjectName("colorButton_4_40")
-        self.gridLayout_3.addWidget(self.colorButton_4_40, 4, 0, 1, 1)
-        self.colorButton_4_41 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_4_41.setMouseTracking(True)
-        self.colorButton_4_41.setToolTipDuration(2500)
-        self.colorButton_4_41.setAutoFillBackground(False)
-        self.colorButton_4_41.setStyleSheet("QPushButton {\n"
-"    background-color:#800000;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_4_41.setText("")
-        self.colorButton_4_41.setCheckable(True)
-        self.colorButton_4_41.setChecked(False)
-        self.colorButton_4_41.setObjectName("colorButton_4_41")
-        self.gridLayout_3.addWidget(self.colorButton_4_41, 4, 1, 1, 1)
-        self.colorButton_4_42 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_4_42.setMouseTracking(True)
-        self.colorButton_4_42.setToolTipDuration(2500)
-        self.colorButton_4_42.setAutoFillBackground(False)
-        self.colorButton_4_42.setStyleSheet("QPushButton {\n"
-"    background-color: #8B4513;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"/* Коли кнопка в стані наведення */\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"/* Коли кнопка натиснута й активна */\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_4_42.setText("")
-        self.colorButton_4_42.setCheckable(True)
-        self.colorButton_4_42.setChecked(False)
-        self.colorButton_4_42.setObjectName("colorButton_4_42")
-        self.gridLayout_3.addWidget(self.colorButton_4_42, 4, 2, 1, 1)
-        self.colorButton_4_43 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_4_43.setMouseTracking(True)
-        self.colorButton_4_43.setToolTipDuration(2500)
-        self.colorButton_4_43.setAutoFillBackground(False)
-        self.colorButton_4_43.setStyleSheet("QPushButton {\n"
-"    background-color: #8B0000;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_4_43.setText("")
-        self.colorButton_4_43.setCheckable(True)
-        self.colorButton_4_43.setChecked(False)
-        self.colorButton_4_43.setObjectName("colorButton_4_43")
-        self.gridLayout_3.addWidget(self.colorButton_4_43, 4, 3, 1, 1)
-        self.colorButton_4_44 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_4_44.setMouseTracking(True)
-        self.colorButton_4_44.setToolTipDuration(2500)
-        self.colorButton_4_44.setAutoFillBackground(False)
-        self.colorButton_4_44.setStyleSheet("QPushButton {\n"
-"    background-color: #FF8C00;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_4_44.setText("")
-        self.colorButton_4_44.setCheckable(True)
-        self.colorButton_4_44.setChecked(False)
-        self.colorButton_4_44.setObjectName("colorButton_4_44")
-        self.gridLayout_3.addWidget(self.colorButton_4_44, 4, 4, 1, 1)
-        self.colorButton_4_45 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_4_45.setMouseTracking(True)
-        self.colorButton_4_45.setToolTipDuration(2500)
-        self.colorButton_4_45.setAutoFillBackground(False)
-        self.colorButton_4_45.setStyleSheet("QPushButton {\n"
-"    background-color: #FF00FF;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_4_45.setText("")
-        self.colorButton_4_45.setCheckable(True)
-        self.colorButton_4_45.setChecked(False)
-        self.colorButton_4_45.setObjectName("colorButton_4_45")
-        self.gridLayout_3.addWidget(self.colorButton_4_45, 4, 5, 1, 1)
-        self.colorButton_4_46 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_4_46.setMouseTracking(True)
-        self.colorButton_4_46.setToolTipDuration(2500)
-        self.colorButton_4_46.setAutoFillBackground(False)
-        self.colorButton_4_46.setStyleSheet("QPushButton {\n"
-"    background-color: #40E0D0;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_4_46.setText("")
-        self.colorButton_4_46.setCheckable(True)
-        self.colorButton_4_46.setChecked(False)
-        self.colorButton_4_46.setObjectName("colorButton_4_46")
-        self.gridLayout_3.addWidget(self.colorButton_4_46, 4, 6, 1, 1)
-        self.colorButton_4_47 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_4_47.setMouseTracking(True)
-        self.colorButton_4_47.setToolTipDuration(2500)
-        self.colorButton_4_47.setAutoFillBackground(False)
-        self.colorButton_4_47.setStyleSheet("QPushButton {\n"
-"    background-color: #E6E6FA;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_4_47.setText("")
-        self.colorButton_4_47.setCheckable(True)
-        self.colorButton_4_47.setChecked(False)
-        self.colorButton_4_47.setObjectName("colorButton_4_47")
-        self.gridLayout_3.addWidget(self.colorButton_4_47, 4, 7, 1, 1)
-        self.colorButton_4_48 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_4_48.setMouseTracking(True)
-        self.colorButton_4_48.setToolTipDuration(2500)
-        self.colorButton_4_48.setAutoFillBackground(False)
-        self.colorButton_4_48.setStyleSheet("QPushButton {\n"
-"    background-color: #FFFFF0;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_4_48.setText("")
-        self.colorButton_4_48.setCheckable(True)
-        self.colorButton_4_48.setChecked(False)
-        self.colorButton_4_48.setObjectName("colorButton_4_48")
-        self.gridLayout_3.addWidget(self.colorButton_4_48, 4, 8, 1, 1)
-        self.colorButton_4_49 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_4_49.setMouseTracking(True)
-        self.colorButton_4_49.setToolTipDuration(2500)
-        self.colorButton_4_49.setAutoFillBackground(False)
-        self.colorButton_4_49.setStyleSheet("QPushButton {\n"
-"    background-color: #FFFFFF;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_4_49.setText("")
-        self.colorButton_4_49.setCheckable(True)
-        self.colorButton_4_49.setChecked(False)
-        self.colorButton_4_49.setObjectName("colorButton_4_49")
-        self.gridLayout_3.addWidget(self.colorButton_4_49, 4, 9, 1, 1)
-        self.colorButton_0_48 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_0_48.setMouseTracking(True)
-        self.colorButton_0_48.setToolTipDuration(2500)
-        self.colorButton_0_48.setAutoFillBackground(False)
-        self.colorButton_0_48.setStyleSheet("QPushButton {\n"
-"    background-color: #4B0082;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_0_48.setText("")
-        self.colorButton_0_48.setCheckable(True)
-        self.colorButton_0_48.setChecked(False)
-        self.colorButton_0_48.setObjectName("colorButton_0_48")
-        self.gridLayout_3.addWidget(self.colorButton_0_48, 0, 2, 1, 1)
-        self.colorButton_0_49 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.colorButton_0_49.setMouseTracking(True)
-        self.colorButton_0_49.setToolTipDuration(2500)
-        self.colorButton_0_49.setAutoFillBackground(False)
-        self.colorButton_0_49.setStyleSheet("QPushButton {\n"
-"    background-color: #006A4E;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_0_49.setText("")
-        self.colorButton_0_49.setCheckable(True)
-        self.colorButton_0_49.setChecked(False)
-        self.colorButton_0_49.setObjectName("colorButton_0_49")
-        self.gridLayout_3.addWidget(self.colorButton_0_49, 0, 3, 1, 1)
-        self.label_14 = QtWidgets.QLabel(self.w_NoisePerlin)
-        self.label_14.setEnabled(False)
-        self.label_14.setGeometry(QtCore.QRect(90, 10, 361, 20))
-        font = QtGui.QFont()
-        font.setPointSize(12)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_14.setFont(font)
-        self.label_14.setStyleSheet("background:transparent;\n"
-"color:white;\n"
-"font-weight:bold;\n"
-"border:none;")
-        self.label_14.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_14.setObjectName("label_14")
-        self.label_2 = QtWidgets.QLabel(self.NoisePerlin)
-        self.label_2.setGeometry(QtCore.QRect(10, 10, 16, 16))
-        self.label_2.setObjectName("label_2")
+        self.colorButton_0_59.setText("")
+        self.colorButton_0_59.setCheckable(True)
+        self.colorButton_0_59.setChecked(False)
+        self.colorButton_0_59.setObjectName("colorButton_0_59")
         self.stackedWidget.addWidget(self.NoisePerlin)
         self.KrivaKoxa = QtWidgets.QWidget()
         self.KrivaKoxa.setObjectName("KrivaKoxa")
@@ -2522,12 +888,134 @@ class Ui_MainMenu(object):
 "color:white;\n"
 "")
         self.b_AddOrigImage2.setObjectName("b_AddOrigImage2")
-        self.w_KrivaKoha = QtWidgets.QWidget(self.KrivaKoxa)
-        self.w_KrivaKoha.setGeometry(QtCore.QRect(30, 610, 741, 241))
-        self.w_KrivaKoha.setStyleSheet("border: 2px solid rgba(235, 225, 225, 0.9);")
-        self.w_KrivaKoha.setObjectName("w_KrivaKoha")
-        self.b_processImageKrivaKoxa = QtWidgets.QPushButton(self.w_KrivaKoha)
-        self.b_processImageKrivaKoxa.setGeometry(QtCore.QRect(540, 80, 171, 41))
+        self.label_3 = QtWidgets.QLabel(self.KrivaKoxa)
+        self.label_3.setGeometry(QtCore.QRect(10, 10, 16, 16))
+        self.label_3.setStyleSheet("background:transparent;")
+        self.label_3.setObjectName("label_3")
+        self.colorButton_0_56 = QtWidgets.QPushButton(self.KrivaKoxa)
+        self.colorButton_0_56.setGeometry(QtCore.QRect(1070, 690, 42, 16))
+        self.colorButton_0_56.setMouseTracking(True)
+        self.colorButton_0_56.setToolTipDuration(2500)
+        self.colorButton_0_56.setAutoFillBackground(False)
+        self.colorButton_0_56.setStyleSheet("QPushButton {\n"
+"    background-color: #90EE90;\n"
+"    border: none;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    border: 3px solid white;\n"
+"}\n"
+"QPushButton:checked {\n"
+"    border: 3px solid black;\n"
+"}\n"
+"")
+        self.colorButton_0_56.setText("")
+        self.colorButton_0_56.setCheckable(True)
+        self.colorButton_0_56.setChecked(False)
+        self.colorButton_0_56.setObjectName("colorButton_0_56")
+        self.colorButton_0_55 = QtWidgets.QPushButton(self.KrivaKoxa)
+        self.colorButton_0_55.setGeometry(QtCore.QRect(1025, 690, 41, 16))
+        self.colorButton_0_55.setMouseTracking(True)
+        self.colorButton_0_55.setToolTipDuration(2500)
+        self.colorButton_0_55.setAutoFillBackground(False)
+        self.colorButton_0_55.setStyleSheet("QPushButton {\n"
+"    background-color: #7FFFD4;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 3px solid white;\n"
+"}\n"
+"\n"
+"QPushButton:checked {\n"
+"    border: 3px solid black;\n"
+"}\n"
+"")
+        self.colorButton_0_55.setText("")
+        self.colorButton_0_55.setCheckable(True)
+        self.colorButton_0_55.setChecked(False)
+        self.colorButton_0_55.setObjectName("colorButton_0_55")
+        self.colorButton_0_54 = QtWidgets.QPushButton(self.KrivaKoxa)
+        self.colorButton_0_54.setGeometry(QtCore.QRect(980, 690, 41, 16))
+        self.colorButton_0_54.setMouseTracking(True)
+        self.colorButton_0_54.setToolTipDuration(2500)
+        self.colorButton_0_54.setAutoFillBackground(False)
+        self.colorButton_0_54.setStyleSheet("QPushButton {\n"
+"    background-color: #FFC0CB;\n"
+"    border: none;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    border: 3px solid white;\n"
+"}\n"
+"QPushButton:checked {\n"
+"    border: 3px solid black;\n"
+"}\n"
+"")
+        self.colorButton_0_54.setText("")
+        self.colorButton_0_54.setCheckable(True)
+        self.colorButton_0_54.setChecked(False)
+        self.colorButton_0_54.setObjectName("colorButton_0_54")
+        self.colorButton_3_62 = QtWidgets.QPushButton(self.KrivaKoxa)
+        self.colorButton_3_62.setGeometry(QtCore.QRect(820, 690, 42, 16))
+        self.colorButton_3_62.setMouseTracking(True)
+        self.colorButton_3_62.setToolTipDuration(2500)
+        self.colorButton_3_62.setAutoFillBackground(False)
+        self.colorButton_3_62.setStyleSheet("QPushButton {\n"
+"    background-color: #C71585;\n"
+"    border: none;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    border: 3px solid white;\n"
+"}\n"
+"QPushButton:checked {\n"
+"    border: 3px solid black;\n"
+"}\n"
+"")
+        self.colorButton_3_62.setText("")
+        self.colorButton_3_62.setCheckable(True)
+        self.colorButton_3_62.setChecked(False)
+        self.colorButton_3_62.setObjectName("colorButton_3_62")
+        self.colorButton_3_60 = QtWidgets.QPushButton(self.KrivaKoxa)
+        self.colorButton_3_60.setGeometry(QtCore.QRect(775, 690, 41, 16))
+        self.colorButton_3_60.setMouseTracking(True)
+        self.colorButton_3_60.setToolTipDuration(2500)
+        self.colorButton_3_60.setAutoFillBackground(False)
+        self.colorButton_3_60.setStyleSheet("QPushButton {\n"
+"    background-color: #4B0082;\n"
+"    border: none;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    border: 3px solid white;\n"
+"}\n"
+"QPushButton:checked {\n"
+"    border: 3px solid black;\n"
+"}\n"
+"")
+        self.colorButton_3_60.setText("")
+        self.colorButton_3_60.setCheckable(True)
+        self.colorButton_3_60.setChecked(False)
+        self.colorButton_3_60.setObjectName("colorButton_3_60")
+        self.colorButton_3_61 = QtWidgets.QPushButton(self.KrivaKoxa)
+        self.colorButton_3_61.setGeometry(QtCore.QRect(730, 690, 41, 16))
+        self.colorButton_3_61.setMouseTracking(True)
+        self.colorButton_3_61.setToolTipDuration(2500)
+        self.colorButton_3_61.setAutoFillBackground(False)
+        self.colorButton_3_61.setStyleSheet("QPushButton {\n"
+"    background-color: #0F52BA;\n"
+"    border: none;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    border: 3px solid white;\n"
+"}\n"
+"QPushButton:checked {\n"
+"    border: 3px solid black;\n"
+"}\n"
+"")
+        self.colorButton_3_61.setText("")
+        self.colorButton_3_61.setCheckable(True)
+        self.colorButton_3_61.setChecked(False)
+        self.colorButton_3_61.setObjectName("colorButton_3_61")
+        self.b_processImageKrivaKoxa = QtWidgets.QPushButton(self.KrivaKoxa)
+        self.b_processImageKrivaKoxa.setGeometry(QtCore.QRect(706, 790, 171, 41))
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
         brush.setStyle(QtCore.Qt.SolidPattern)
@@ -2619,21 +1107,46 @@ class Ui_MainMenu(object):
 "    text-decoration: underline;\n"
 "}")
         self.b_processImageKrivaKoxa.setObjectName("b_processImageKrivaKoxa")
-        self.layoutWidget_4 = QtWidgets.QWidget(self.w_KrivaKoha)
-        self.layoutWidget_4.setGeometry(QtCore.QRect(37, 41, 461, 161))
-        self.layoutWidget_4.setObjectName("layoutWidget_4")
-        self.gridLayout_4 = QtWidgets.QGridLayout(self.layoutWidget_4)
-        self.gridLayout_4.setSizeConstraint(QtWidgets.QLayout.SetDefaultConstraint)
-        self.gridLayout_4.setContentsMargins(6, 0, 6, 0)
-        self.gridLayout_4.setHorizontalSpacing(4)
-        self.gridLayout_4.setVerticalSpacing(5)
-        self.gridLayout_4.setObjectName("gridLayout_4")
-        self.colorButton_0_50 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_0_50.setMouseTracking(True)
-        self.colorButton_0_50.setToolTipDuration(2500)
-        self.colorButton_0_50.setAutoFillBackground(False)
-        self.colorButton_0_50.setStyleSheet("QPushButton {\n"
-"    background-color: #000000;\n"
+        self.label_15 = QtWidgets.QLabel(self.KrivaKoxa)
+        self.label_15.setEnabled(False)
+        self.label_15.setGeometry(QtCore.QRect(610, 620, 361, 20))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_15.setFont(font)
+        self.label_15.setStyleSheet("background:transparent;\n"
+"color:white;\n"
+"font-weight:bold;\n"
+"border:none;")
+        self.label_15.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_15.setObjectName("label_15")
+        self.pushButton = QtWidgets.QPushButton(self.KrivaKoxa)
+        self.pushButton.setGeometry(QtCore.QRect(425, 681, 241, 91))
+        self.pushButton.setStyleSheet("QPushButton {\n"
+"    border: 0.5px solid white;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 3px solid white;\n"
+"}\n"
+"\n"
+"QPushButton:checked {\n"
+"    background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0,\n"
+"    stop:0 rgba(70, 35, 105, 200),\n"
+"    stop:0.427447 rgba(60, 75, 135, 200),\n"
+"    stop:1 rgba(120, 75, 135, 220));\n"
+"}")
+        self.pushButton.setText("")
+        self.pushButton.setCheckable(True)
+        self.pushButton.setObjectName("pushButton")
+        self.colorButton_0_61 = QtWidgets.QPushButton(self.KrivaKoxa)
+        self.colorButton_0_61.setGeometry(QtCore.QRect(571, 690, 41, 16))
+        self.colorButton_0_61.setMouseTracking(True)
+        self.colorButton_0_61.setToolTipDuration(2500)
+        self.colorButton_0_61.setAutoFillBackground(False)
+        self.colorButton_0_61.setStyleSheet("QPushButton {\n"
+"    background-color: #4B0082;\n"
 "    border: none;\n"
 "}\n"
 "\n"
@@ -2645,16 +1158,16 @@ class Ui_MainMenu(object):
 "    border: 3px solid black;\n"
 "}\n"
 "")
-        self.colorButton_0_50.setText("")
-        self.colorButton_0_50.setCheckable(True)
-        self.colorButton_0_50.setChecked(False)
-        self.colorButton_0_50.setObjectName("colorButton_0_50")
-        self.gridLayout_4.addWidget(self.colorButton_0_50, 0, 0, 1, 1)
-        self.colorButton_0_51 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_0_51.setMouseTracking(True)
-        self.colorButton_0_51.setToolTipDuration(2500)
-        self.colorButton_0_51.setAutoFillBackground(False)
-        self.colorButton_0_51.setStyleSheet("QPushButton {\n"
+        self.colorButton_0_61.setText("")
+        self.colorButton_0_61.setCheckable(True)
+        self.colorButton_0_61.setChecked(False)
+        self.colorButton_0_61.setObjectName("colorButton_0_61")
+        self.colorButton_0_62 = QtWidgets.QPushButton(self.KrivaKoxa)
+        self.colorButton_0_62.setGeometry(QtCore.QRect(525, 690, 42, 16))
+        self.colorButton_0_62.setMouseTracking(True)
+        self.colorButton_0_62.setToolTipDuration(2500)
+        self.colorButton_0_62.setAutoFillBackground(False)
+        self.colorButton_0_62.setStyleSheet("QPushButton {\n"
 "    background-color: #364135;\n"
 "    border: none;\n"
 "}\n"
@@ -2669,80 +1182,17 @@ class Ui_MainMenu(object):
 "    border: 3px solid black;\n"
 "}\n"
 "")
-        self.colorButton_0_51.setText("")
-        self.colorButton_0_51.setCheckable(True)
-        self.colorButton_0_51.setChecked(False)
-        self.colorButton_0_51.setObjectName("colorButton_0_51")
-        self.gridLayout_4.addWidget(self.colorButton_0_51, 0, 1, 1, 1)
-        self.colorButton_0_52 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_0_52.setMouseTracking(True)
-        self.colorButton_0_52.setToolTipDuration(2500)
-        self.colorButton_0_52.setAutoFillBackground(False)
-        self.colorButton_0_52.setStyleSheet("QPushButton {\n"
-"    background-color: #9B111E;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_0_52.setText("")
-        self.colorButton_0_52.setCheckable(True)
-        self.colorButton_0_52.setChecked(False)
-        self.colorButton_0_52.setObjectName("colorButton_0_52")
-        self.gridLayout_4.addWidget(self.colorButton_0_52, 0, 4, 1, 1)
-        self.colorButton_0_53 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_0_53.setMouseTracking(True)
-        self.colorButton_0_53.setToolTipDuration(2500)
-        self.colorButton_0_53.setAutoFillBackground(False)
-        self.colorButton_0_53.setStyleSheet("QPushButton {\n"
-"    background-color: #FFA500;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_0_53.setText("")
-        self.colorButton_0_53.setCheckable(True)
-        self.colorButton_0_53.setChecked(False)
-        self.colorButton_0_53.setObjectName("colorButton_0_53")
-        self.gridLayout_4.addWidget(self.colorButton_0_53, 0, 5, 1, 1)
-        self.colorButton_0_54 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_0_54.setMouseTracking(True)
-        self.colorButton_0_54.setToolTipDuration(2500)
-        self.colorButton_0_54.setAutoFillBackground(False)
-        self.colorButton_0_54.setStyleSheet("QPushButton {\n"
-"    background-color: #FFC0CB;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_0_54.setText("")
-        self.colorButton_0_54.setCheckable(True)
-        self.colorButton_0_54.setChecked(False)
-        self.colorButton_0_54.setObjectName("colorButton_0_54")
-        self.gridLayout_4.addWidget(self.colorButton_0_54, 0, 6, 1, 1)
-        self.colorButton_0_55 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_0_55.setMouseTracking(True)
-        self.colorButton_0_55.setToolTipDuration(2500)
-        self.colorButton_0_55.setAutoFillBackground(False)
-        self.colorButton_0_55.setStyleSheet("QPushButton {\n"
-"    background-color: #7FFFD4;\n"
+        self.colorButton_0_62.setText("")
+        self.colorButton_0_62.setCheckable(True)
+        self.colorButton_0_62.setChecked(False)
+        self.colorButton_0_62.setObjectName("colorButton_0_62")
+        self.colorButton_0_60 = QtWidgets.QPushButton(self.KrivaKoxa)
+        self.colorButton_0_60.setGeometry(QtCore.QRect(480, 690, 41, 16))
+        self.colorButton_0_60.setMouseTracking(True)
+        self.colorButton_0_60.setToolTipDuration(2500)
+        self.colorButton_0_60.setAutoFillBackground(False)
+        self.colorButton_0_60.setStyleSheet("QPushButton {\n"
+"    background-color: #000000;\n"
 "    border: none;\n"
 "}\n"
 "\n"
@@ -2754,38 +1204,14 @@ class Ui_MainMenu(object):
 "    border: 3px solid black;\n"
 "}\n"
 "")
-        self.colorButton_0_55.setText("")
-        self.colorButton_0_55.setCheckable(True)
-        self.colorButton_0_55.setChecked(False)
-        self.colorButton_0_55.setObjectName("colorButton_0_55")
-        self.gridLayout_4.addWidget(self.colorButton_0_55, 0, 7, 1, 1)
-        self.colorButton_0_56 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_0_56.setMouseTracking(True)
-        self.colorButton_0_56.setToolTipDuration(2500)
-        self.colorButton_0_56.setAutoFillBackground(False)
-        self.colorButton_0_56.setStyleSheet("QPushButton {\n"
-"    background-color: #90EE90;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_0_56.setText("")
-        self.colorButton_0_56.setCheckable(True)
-        self.colorButton_0_56.setChecked(False)
-        self.colorButton_0_56.setObjectName("colorButton_0_56")
-        self.gridLayout_4.addWidget(self.colorButton_0_56, 0, 8, 1, 1)
-        self.colorButton_0_57 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_0_57.setMouseTracking(True)
-        self.colorButton_0_57.setToolTipDuration(2500)
-        self.colorButton_0_57.setAutoFillBackground(False)
-        self.colorButton_0_57.setStyleSheet("QPushButton {\n"
-"    background-color: #FFFDD0;\n"
-"    border: none;\n"
+        self.colorButton_0_60.setText("")
+        self.colorButton_0_60.setCheckable(True)
+        self.colorButton_0_60.setChecked(False)
+        self.colorButton_0_60.setObjectName("colorButton_0_60")
+        self.pushButton_2 = QtWidgets.QPushButton(self.KrivaKoxa)
+        self.pushButton_2.setGeometry(QtCore.QRect(676, 681, 241, 91))
+        self.pushButton_2.setStyleSheet("QPushButton {\n"
+"    border: 0.5px solid white;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
@@ -2793,45 +1219,18 @@ class Ui_MainMenu(object):
 "}\n"
 "\n"
 "QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_0_57.setText("")
-        self.colorButton_0_57.setCheckable(True)
-        self.colorButton_0_57.setChecked(False)
-        self.colorButton_0_57.setObjectName("colorButton_0_57")
-        self.gridLayout_4.addWidget(self.colorButton_0_57, 0, 9, 1, 1)
-        self.colorButton_1_50 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_1_50.setMouseTracking(True)
-        self.colorButton_1_50.setToolTipDuration(2500)
-        self.colorButton_1_50.setAutoFillBackground(False)
-        self.colorButton_1_50.setStyleSheet("QPushButton {\n"
-"    background-color: #2F2F2F;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"/* Коли кнопка в стані наведення */\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"/* Коли кнопка натиснута й активна */\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_1_50.setText("")
-        self.colorButton_1_50.setCheckable(True)
-        self.colorButton_1_50.setChecked(False)
-        self.colorButton_1_50.setObjectName("colorButton_1_50")
-        self.gridLayout_4.addWidget(self.colorButton_1_50, 1, 0, 1, 1)
-        self.colorButton_1_51 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_1_51.setMouseTracking(True)
-        self.colorButton_1_51.setToolTipDuration(2500)
-        self.colorButton_1_51.setAutoFillBackground(False)
-        self.colorButton_1_51.setStyleSheet("QPushButton {\n"
-"    background-color: #3B2F2F;\n"
-"    border: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0,\n"
+"    stop:0 rgba(70, 35, 105, 200),\n"
+"    stop:0.427447 rgba(60, 75, 135, 200),\n"
+"    stop:1 rgba(120, 75, 135, 220));\n"
+"}")
+        self.pushButton_2.setText("")
+        self.pushButton_2.setCheckable(True)
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.pushButton_3 = QtWidgets.QPushButton(self.KrivaKoxa)
+        self.pushButton_3.setGeometry(QtCore.QRect(927, 681, 241, 91))
+        self.pushButton_3.setStyleSheet("QPushButton {\n"
+"    border: 0.5px solid white;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
@@ -2839,865 +1238,35 @@ class Ui_MainMenu(object):
 "}\n"
 "\n"
 "QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_1_51.setText("")
-        self.colorButton_1_51.setCheckable(True)
-        self.colorButton_1_51.setChecked(False)
-        self.colorButton_1_51.setObjectName("colorButton_1_51")
-        self.gridLayout_4.addWidget(self.colorButton_1_51, 1, 1, 1, 1)
-        self.colorButton_1_52 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_1_52.setMouseTracking(True)
-        self.colorButton_1_52.setToolTipDuration(2500)
-        self.colorButton_1_52.setAutoFillBackground(False)
-        self.colorButton_1_52.setStyleSheet("QPushButton {\n"
-"    background-color: #008080;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_1_52.setText("")
-        self.colorButton_1_52.setCheckable(True)
-        self.colorButton_1_52.setChecked(False)
-        self.colorButton_1_52.setObjectName("colorButton_1_52")
-        self.gridLayout_4.addWidget(self.colorButton_1_52, 1, 2, 1, 1)
-        self.colorButton_1_53 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_1_53.setMouseTracking(True)
-        self.colorButton_1_53.setToolTipDuration(2500)
-        self.colorButton_1_53.setAutoFillBackground(False)
-        self.colorButton_1_53.setStyleSheet("QPushButton {\n"
-"    background-color:#006D77;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_1_53.setText("")
-        self.colorButton_1_53.setCheckable(True)
-        self.colorButton_1_53.setChecked(False)
-        self.colorButton_1_53.setObjectName("colorButton_1_53")
-        self.gridLayout_4.addWidget(self.colorButton_1_53, 1, 3, 1, 1)
-        self.colorButton_1_54 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_1_54.setMouseTracking(True)
-        self.colorButton_1_54.setToolTipDuration(2500)
-        self.colorButton_1_54.setAutoFillBackground(False)
-        self.colorButton_1_54.setStyleSheet("QPushButton {\n"
-"    background-color: #A52A2A;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_1_54.setText("")
-        self.colorButton_1_54.setCheckable(True)
-        self.colorButton_1_54.setChecked(False)
-        self.colorButton_1_54.setObjectName("colorButton_1_54")
-        self.gridLayout_4.addWidget(self.colorButton_1_54, 1, 4, 1, 1)
-        self.colorButton_1_55 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_1_55.setMouseTracking(True)
-        self.colorButton_1_55.setToolTipDuration(2500)
-        self.colorButton_1_55.setAutoFillBackground(False)
-        self.colorButton_1_55.setStyleSheet("QPushButton {\n"
-"    background-color: #FF0000;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_1_55.setText("")
-        self.colorButton_1_55.setCheckable(True)
-        self.colorButton_1_55.setChecked(False)
-        self.colorButton_1_55.setObjectName("colorButton_1_55")
-        self.gridLayout_4.addWidget(self.colorButton_1_55, 1, 5, 1, 1)
-        self.colorButton_1_56 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_1_56.setMouseTracking(True)
-        self.colorButton_1_56.setToolTipDuration(2500)
-        self.colorButton_1_56.setAutoFillBackground(False)
-        self.colorButton_1_56.setStyleSheet("QPushButton {\n"
-"    background-color: #DC143C;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_1_56.setText("")
-        self.colorButton_1_56.setCheckable(True)
-        self.colorButton_1_56.setChecked(False)
-        self.colorButton_1_56.setObjectName("colorButton_1_56")
-        self.gridLayout_4.addWidget(self.colorButton_1_56, 1, 6, 1, 1)
-        self.colorButton_1_57 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_1_57.setMouseTracking(True)
-        self.colorButton_1_57.setToolTipDuration(2500)
-        self.colorButton_1_57.setAutoFillBackground(False)
-        self.colorButton_1_57.setStyleSheet("QPushButton {\n"
-"    background-color: #87CEFA;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_1_57.setText("")
-        self.colorButton_1_57.setCheckable(True)
-        self.colorButton_1_57.setChecked(False)
-        self.colorButton_1_57.setObjectName("colorButton_1_57")
-        self.gridLayout_4.addWidget(self.colorButton_1_57, 1, 7, 1, 1)
-        self.colorButton_1_58 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_1_58.setMouseTracking(True)
-        self.colorButton_1_58.setToolTipDuration(2500)
-        self.colorButton_1_58.setAutoFillBackground(False)
-        self.colorButton_1_58.setStyleSheet("QPushButton {\n"
-"    background-color: #FFFFE0;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_1_58.setText("")
-        self.colorButton_1_58.setCheckable(True)
-        self.colorButton_1_58.setChecked(False)
-        self.colorButton_1_58.setObjectName("colorButton_1_58")
-        self.gridLayout_4.addWidget(self.colorButton_1_58, 1, 8, 1, 1)
-        self.colorButton_1_59 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_1_59.setMouseTracking(True)
-        self.colorButton_1_59.setToolTipDuration(2500)
-        self.colorButton_1_59.setAutoFillBackground(False)
-        self.colorButton_1_59.setStyleSheet("QPushButton {\n"
-"    background-color: #F5F5F5;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_1_59.setText("")
-        self.colorButton_1_59.setCheckable(True)
-        self.colorButton_1_59.setChecked(False)
-        self.colorButton_1_59.setObjectName("colorButton_1_59")
-        self.gridLayout_4.addWidget(self.colorButton_1_59, 1, 9, 1, 1)
-        self.colorButton_2_50 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_2_50.setMouseTracking(True)
-        self.colorButton_2_50.setToolTipDuration(2500)
-        self.colorButton_2_50.setAutoFillBackground(False)
-        self.colorButton_2_50.setStyleSheet("QPushButton {\n"
-"    background-color: #36454F;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"/* Коли кнопка в стані наведення */\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"/* Коли кнопка натиснута й активна */\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_2_50.setText("")
-        self.colorButton_2_50.setCheckable(True)
-        self.colorButton_2_50.setChecked(False)
-        self.colorButton_2_50.setObjectName("colorButton_2_50")
-        self.gridLayout_4.addWidget(self.colorButton_2_50, 2, 0, 1, 1)
-        self.colorButton_2_51 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_2_51.setMouseTracking(True)
-        self.colorButton_2_51.setToolTipDuration(2500)
-        self.colorButton_2_51.setAutoFillBackground(False)
-        self.colorButton_2_51.setStyleSheet("QPushButton {\n"
-"    background-color: #301934;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_2_51.setText("")
-        self.colorButton_2_51.setCheckable(True)
-        self.colorButton_2_51.setChecked(False)
-        self.colorButton_2_51.setObjectName("colorButton_2_51")
-        self.gridLayout_4.addWidget(self.colorButton_2_51, 2, 1, 1, 1)
-        self.colorButton_2_52 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_2_52.setMouseTracking(True)
-        self.colorButton_2_52.setToolTipDuration(2500)
-        self.colorButton_2_52.setAutoFillBackground(False)
-        self.colorButton_2_52.setStyleSheet("QPushButton {\n"
-"    background-color: #485320;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_2_52.setText("")
-        self.colorButton_2_52.setCheckable(True)
-        self.colorButton_2_52.setChecked(False)
-        self.colorButton_2_52.setObjectName("colorButton_2_52")
-        self.gridLayout_4.addWidget(self.colorButton_2_52, 2, 2, 1, 1)
-        self.colorButton_2_53 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_2_53.setMouseTracking(True)
-        self.colorButton_2_53.setToolTipDuration(2500)
-        self.colorButton_2_53.setAutoFillBackground(False)
-        self.colorButton_2_53.setStyleSheet("QPushButton {\n"
-"    background-color: #191970;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_2_53.setText("")
-        self.colorButton_2_53.setCheckable(True)
-        self.colorButton_2_53.setChecked(False)
-        self.colorButton_2_53.setObjectName("colorButton_2_53")
-        self.gridLayout_4.addWidget(self.colorButton_2_53, 2, 3, 1, 1)
-        self.colorButton_2_54 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_2_54.setMouseTracking(True)
-        self.colorButton_2_54.setToolTipDuration(2500)
-        self.colorButton_2_54.setAutoFillBackground(False)
-        self.colorButton_2_54.setStyleSheet("QPushButton {\n"
-"    background-color: #C04000;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_2_54.setText("")
-        self.colorButton_2_54.setCheckable(True)
-        self.colorButton_2_54.setChecked(False)
-        self.colorButton_2_54.setObjectName("colorButton_2_54")
-        self.gridLayout_4.addWidget(self.colorButton_2_54, 2, 4, 1, 1)
-        self.colorButton_2_55 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_2_55.setMouseTracking(True)
-        self.colorButton_2_55.setToolTipDuration(2500)
-        self.colorButton_2_55.setAutoFillBackground(False)
-        self.colorButton_2_55.setStyleSheet("QPushButton {\n"
-"    background-color: #800080;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_2_55.setText("")
-        self.colorButton_2_55.setCheckable(True)
-        self.colorButton_2_55.setChecked(False)
-        self.colorButton_2_55.setObjectName("colorButton_2_55")
-        self.gridLayout_4.addWidget(self.colorButton_2_55, 2, 5, 1, 1)
-        self.colorButton_2_56 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_2_56.setMouseTracking(True)
-        self.colorButton_2_56.setToolTipDuration(2500)
-        self.colorButton_2_56.setAutoFillBackground(False)
-        self.colorButton_2_56.setStyleSheet("QPushButton {\n"
-"    background-color: #00FF00;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_2_56.setText("")
-        self.colorButton_2_56.setCheckable(True)
-        self.colorButton_2_56.setChecked(False)
-        self.colorButton_2_56.setObjectName("colorButton_2_56")
-        self.gridLayout_4.addWidget(self.colorButton_2_56, 2, 6, 1, 1)
-        self.colorButton_2_57 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_2_57.setMouseTracking(True)
-        self.colorButton_2_57.setToolTipDuration(2500)
-        self.colorButton_2_57.setAutoFillBackground(False)
-        self.colorButton_2_57.setStyleSheet("QPushButton {\n"
-"    background-color: #87CEEB;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_2_57.setText("")
-        self.colorButton_2_57.setCheckable(True)
-        self.colorButton_2_57.setChecked(False)
-        self.colorButton_2_57.setObjectName("colorButton_2_57")
-        self.gridLayout_4.addWidget(self.colorButton_2_57, 2, 7, 1, 1)
-        self.colorButton_2_58 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_2_58.setMouseTracking(True)
-        self.colorButton_2_58.setToolTipDuration(2500)
-        self.colorButton_2_58.setAutoFillBackground(False)
-        self.colorButton_2_58.setStyleSheet("QPushButton {\n"
-"    background-color: #FFFF00;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_2_58.setText("")
-        self.colorButton_2_58.setCheckable(True)
-        self.colorButton_2_58.setChecked(False)
-        self.colorButton_2_58.setObjectName("colorButton_2_58")
-        self.gridLayout_4.addWidget(self.colorButton_2_58, 2, 8, 1, 1)
-        self.colorButton_2_59 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_2_59.setMouseTracking(True)
-        self.colorButton_2_59.setToolTipDuration(2500)
-        self.colorButton_2_59.setAutoFillBackground(False)
-        self.colorButton_2_59.setStyleSheet("QPushButton {\n"
-"    background-color: #D3D3D3;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_2_59.setText("")
-        self.colorButton_2_59.setCheckable(True)
-        self.colorButton_2_59.setChecked(False)
-        self.colorButton_2_59.setObjectName("colorButton_2_59")
-        self.gridLayout_4.addWidget(self.colorButton_2_59, 2, 9, 1, 1)
-        self.colorButton_3_50 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_3_50.setMouseTracking(True)
-        self.colorButton_3_50.setToolTipDuration(2500)
-        self.colorButton_3_50.setAutoFillBackground(False)
-        self.colorButton_3_50.setStyleSheet("QPushButton {\n"
-"    background-color: #00008B;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"/* Коли кнопка в стані наведення */\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"/* Коли кнопка натиснута й активна */\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_3_50.setText("")
-        self.colorButton_3_50.setCheckable(True)
-        self.colorButton_3_50.setChecked(False)
-        self.colorButton_3_50.setObjectName("colorButton_3_50")
-        self.gridLayout_4.addWidget(self.colorButton_3_50, 3, 0, 1, 1)
-        self.colorButton_3_51 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_3_51.setMouseTracking(True)
-        self.colorButton_3_51.setToolTipDuration(2500)
-        self.colorButton_3_51.setAutoFillBackground(False)
-        self.colorButton_3_51.setStyleSheet("QPushButton {\n"
-"    background-color: #3B3C36;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_3_51.setText("")
-        self.colorButton_3_51.setCheckable(True)
-        self.colorButton_3_51.setChecked(False)
-        self.colorButton_3_51.setObjectName("colorButton_3_51")
-        self.gridLayout_4.addWidget(self.colorButton_3_51, 3, 1, 1, 1)
-        self.colorButton_3_52 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_3_52.setMouseTracking(True)
-        self.colorButton_3_52.setToolTipDuration(2500)
-        self.colorButton_3_52.setAutoFillBackground(False)
-        self.colorButton_3_52.setStyleSheet("QPushButton {\n"
-"    background-color: #228B22;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_3_52.setText("")
-        self.colorButton_3_52.setCheckable(True)
-        self.colorButton_3_52.setChecked(False)
-        self.colorButton_3_52.setObjectName("colorButton_3_52")
-        self.gridLayout_4.addWidget(self.colorButton_3_52, 3, 2, 1, 1)
-        self.colorButton_3_53 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_3_53.setMouseTracking(True)
-        self.colorButton_3_53.setToolTipDuration(2500)
-        self.colorButton_3_53.setAutoFillBackground(False)
-        self.colorButton_3_53.setStyleSheet("QPushButton {\n"
-"    background-color: #0F52BA;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_3_53.setText("")
-        self.colorButton_3_53.setCheckable(True)
-        self.colorButton_3_53.setChecked(False)
-        self.colorButton_3_53.setObjectName("colorButton_3_53")
-        self.gridLayout_4.addWidget(self.colorButton_3_53, 3, 3, 1, 1)
-        self.colorButton_3_54 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_3_54.setMouseTracking(True)
-        self.colorButton_3_54.setToolTipDuration(2500)
-        self.colorButton_3_54.setAutoFillBackground(False)
-        self.colorButton_3_54.setStyleSheet("QPushButton {\n"
-"    background-color: #4B0082;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_3_54.setText("")
-        self.colorButton_3_54.setCheckable(True)
-        self.colorButton_3_54.setChecked(False)
-        self.colorButton_3_54.setObjectName("colorButton_3_54")
-        self.gridLayout_4.addWidget(self.colorButton_3_54, 3, 4, 1, 1)
-        self.colorButton_3_55 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_3_55.setMouseTracking(True)
-        self.colorButton_3_55.setToolTipDuration(2500)
-        self.colorButton_3_55.setAutoFillBackground(False)
-        self.colorButton_3_55.setStyleSheet("QPushButton {\n"
-"    background-color: #C71585;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_3_55.setText("")
-        self.colorButton_3_55.setCheckable(True)
-        self.colorButton_3_55.setChecked(False)
-        self.colorButton_3_55.setObjectName("colorButton_3_55")
-        self.gridLayout_4.addWidget(self.colorButton_3_55, 3, 5, 1, 1)
-        self.colorButton_3_56 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_3_56.setMouseTracking(True)
-        self.colorButton_3_56.setToolTipDuration(2500)
-        self.colorButton_3_56.setAutoFillBackground(False)
-        self.colorButton_3_56.setStyleSheet("QPushButton {\n"
-"    background-color: #00FF7F;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_3_56.setText("")
-        self.colorButton_3_56.setCheckable(True)
-        self.colorButton_3_56.setChecked(False)
-        self.colorButton_3_56.setObjectName("colorButton_3_56")
-        self.gridLayout_4.addWidget(self.colorButton_3_56, 3, 6, 1, 1)
-        self.colorButton_3_57 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_3_57.setMouseTracking(True)
-        self.colorButton_3_57.setToolTipDuration(2500)
-        self.colorButton_3_57.setAutoFillBackground(False)
-        self.colorButton_3_57.setStyleSheet("QPushButton {\n"
-"    background-color: #0000FF;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_3_57.setText("")
-        self.colorButton_3_57.setCheckable(True)
-        self.colorButton_3_57.setChecked(False)
-        self.colorButton_3_57.setObjectName("colorButton_3_57")
-        self.gridLayout_4.addWidget(self.colorButton_3_57, 3, 7, 1, 1)
-        self.colorButton_3_58 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_3_58.setMouseTracking(True)
-        self.colorButton_3_58.setToolTipDuration(2500)
-        self.colorButton_3_58.setAutoFillBackground(False)
-        self.colorButton_3_58.setStyleSheet("QPushButton {\n"
-"    background-color: #FFD700;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_3_58.setText("")
-        self.colorButton_3_58.setCheckable(True)
-        self.colorButton_3_58.setChecked(False)
-        self.colorButton_3_58.setObjectName("colorButton_3_58")
-        self.gridLayout_4.addWidget(self.colorButton_3_58, 3, 8, 1, 1)
-        self.colorButton_3_59 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_3_59.setMouseTracking(True)
-        self.colorButton_3_59.setToolTipDuration(2500)
-        self.colorButton_3_59.setAutoFillBackground(False)
-        self.colorButton_3_59.setStyleSheet("QPushButton {\n"
-"    background-color: #C0C0C0;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_3_59.setText("")
-        self.colorButton_3_59.setCheckable(True)
-        self.colorButton_3_59.setChecked(False)
-        self.colorButton_3_59.setObjectName("colorButton_3_59")
-        self.gridLayout_4.addWidget(self.colorButton_3_59, 3, 9, 1, 1)
-        self.colorButton_4_50 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_4_50.setMouseTracking(True)
-        self.colorButton_4_50.setToolTipDuration(2500)
-        self.colorButton_4_50.setAutoFillBackground(False)
-        self.colorButton_4_50.setStyleSheet("QPushButton {\n"
-"    background-color:#013220;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"/* Коли кнопка в стані наведення */\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"/* Коли кнопка натиснута й активна */\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_4_50.setText("")
-        self.colorButton_4_50.setCheckable(True)
-        self.colorButton_4_50.setChecked(False)
-        self.colorButton_4_50.setObjectName("colorButton_4_50")
-        self.gridLayout_4.addWidget(self.colorButton_4_50, 4, 0, 1, 1)
-        self.colorButton_4_51 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_4_51.setMouseTracking(True)
-        self.colorButton_4_51.setToolTipDuration(2500)
-        self.colorButton_4_51.setAutoFillBackground(False)
-        self.colorButton_4_51.setStyleSheet("QPushButton {\n"
-"    background-color:#800000;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_4_51.setText("")
-        self.colorButton_4_51.setCheckable(True)
-        self.colorButton_4_51.setChecked(False)
-        self.colorButton_4_51.setObjectName("colorButton_4_51")
-        self.gridLayout_4.addWidget(self.colorButton_4_51, 4, 1, 1, 1)
-        self.colorButton_4_52 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_4_52.setMouseTracking(True)
-        self.colorButton_4_52.setToolTipDuration(2500)
-        self.colorButton_4_52.setAutoFillBackground(False)
-        self.colorButton_4_52.setStyleSheet("QPushButton {\n"
-"    background-color: #8B4513;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"/* Коли кнопка в стані наведення */\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"/* Коли кнопка натиснута й активна */\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_4_52.setText("")
-        self.colorButton_4_52.setCheckable(True)
-        self.colorButton_4_52.setChecked(False)
-        self.colorButton_4_52.setObjectName("colorButton_4_52")
-        self.gridLayout_4.addWidget(self.colorButton_4_52, 4, 2, 1, 1)
-        self.colorButton_4_53 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_4_53.setMouseTracking(True)
-        self.colorButton_4_53.setToolTipDuration(2500)
-        self.colorButton_4_53.setAutoFillBackground(False)
-        self.colorButton_4_53.setStyleSheet("QPushButton {\n"
-"    background-color: #8B0000;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_4_53.setText("")
-        self.colorButton_4_53.setCheckable(True)
-        self.colorButton_4_53.setChecked(False)
-        self.colorButton_4_53.setObjectName("colorButton_4_53")
-        self.gridLayout_4.addWidget(self.colorButton_4_53, 4, 3, 1, 1)
-        self.colorButton_4_54 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_4_54.setMouseTracking(True)
-        self.colorButton_4_54.setToolTipDuration(2500)
-        self.colorButton_4_54.setAutoFillBackground(False)
-        self.colorButton_4_54.setStyleSheet("QPushButton {\n"
-"    background-color: #FF8C00;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_4_54.setText("")
-        self.colorButton_4_54.setCheckable(True)
-        self.colorButton_4_54.setChecked(False)
-        self.colorButton_4_54.setObjectName("colorButton_4_54")
-        self.gridLayout_4.addWidget(self.colorButton_4_54, 4, 4, 1, 1)
-        self.colorButton_4_55 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_4_55.setMouseTracking(True)
-        self.colorButton_4_55.setToolTipDuration(2500)
-        self.colorButton_4_55.setAutoFillBackground(False)
-        self.colorButton_4_55.setStyleSheet("QPushButton {\n"
-"    background-color: #FF00FF;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_4_55.setText("")
-        self.colorButton_4_55.setCheckable(True)
-        self.colorButton_4_55.setChecked(False)
-        self.colorButton_4_55.setObjectName("colorButton_4_55")
-        self.gridLayout_4.addWidget(self.colorButton_4_55, 4, 5, 1, 1)
-        self.colorButton_4_56 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_4_56.setMouseTracking(True)
-        self.colorButton_4_56.setToolTipDuration(2500)
-        self.colorButton_4_56.setAutoFillBackground(False)
-        self.colorButton_4_56.setStyleSheet("QPushButton {\n"
-"    background-color: #40E0D0;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_4_56.setText("")
-        self.colorButton_4_56.setCheckable(True)
-        self.colorButton_4_56.setChecked(False)
-        self.colorButton_4_56.setObjectName("colorButton_4_56")
-        self.gridLayout_4.addWidget(self.colorButton_4_56, 4, 6, 1, 1)
-        self.colorButton_4_57 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_4_57.setMouseTracking(True)
-        self.colorButton_4_57.setToolTipDuration(2500)
-        self.colorButton_4_57.setAutoFillBackground(False)
-        self.colorButton_4_57.setStyleSheet("QPushButton {\n"
-"    background-color: #E6E6FA;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_4_57.setText("")
-        self.colorButton_4_57.setCheckable(True)
-        self.colorButton_4_57.setChecked(False)
-        self.colorButton_4_57.setObjectName("colorButton_4_57")
-        self.gridLayout_4.addWidget(self.colorButton_4_57, 4, 7, 1, 1)
-        self.colorButton_4_58 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_4_58.setMouseTracking(True)
-        self.colorButton_4_58.setToolTipDuration(2500)
-        self.colorButton_4_58.setAutoFillBackground(False)
-        self.colorButton_4_58.setStyleSheet("QPushButton {\n"
-"    background-color: #FFFFF0;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_4_58.setText("")
-        self.colorButton_4_58.setCheckable(True)
-        self.colorButton_4_58.setChecked(False)
-        self.colorButton_4_58.setObjectName("colorButton_4_58")
-        self.gridLayout_4.addWidget(self.colorButton_4_58, 4, 8, 1, 1)
-        self.colorButton_4_59 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_4_59.setMouseTracking(True)
-        self.colorButton_4_59.setToolTipDuration(2500)
-        self.colorButton_4_59.setAutoFillBackground(False)
-        self.colorButton_4_59.setStyleSheet("QPushButton {\n"
-"    background-color: #FFFFFF;\n"
-"    border: none;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_4_59.setText("")
-        self.colorButton_4_59.setCheckable(True)
-        self.colorButton_4_59.setChecked(False)
-        self.colorButton_4_59.setObjectName("colorButton_4_59")
-        self.gridLayout_4.addWidget(self.colorButton_4_59, 4, 9, 1, 1)
-        self.colorButton_0_58 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_0_58.setMouseTracking(True)
-        self.colorButton_0_58.setToolTipDuration(2500)
-        self.colorButton_0_58.setAutoFillBackground(False)
-        self.colorButton_0_58.setStyleSheet("QPushButton {\n"
-"    background-color: #4B0082;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_0_58.setText("")
-        self.colorButton_0_58.setCheckable(True)
-        self.colorButton_0_58.setChecked(False)
-        self.colorButton_0_58.setObjectName("colorButton_0_58")
-        self.gridLayout_4.addWidget(self.colorButton_0_58, 0, 2, 1, 1)
-        self.colorButton_0_59 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.colorButton_0_59.setMouseTracking(True)
-        self.colorButton_0_59.setToolTipDuration(2500)
-        self.colorButton_0_59.setAutoFillBackground(False)
-        self.colorButton_0_59.setStyleSheet("QPushButton {\n"
-"    background-color: #006A4E;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    border: 3px solid white;\n"
-"}\n"
-"QPushButton:checked {\n"
-"    border: 3px solid black;\n"
-"}\n"
-"")
-        self.colorButton_0_59.setText("")
-        self.colorButton_0_59.setCheckable(True)
-        self.colorButton_0_59.setChecked(False)
-        self.colorButton_0_59.setObjectName("colorButton_0_59")
-        self.gridLayout_4.addWidget(self.colorButton_0_59, 0, 3, 1, 1)
-        self.label_15 = QtWidgets.QLabel(self.w_KrivaKoha)
-        self.label_15.setEnabled(False)
-        self.label_15.setGeometry(QtCore.QRect(90, 10, 361, 20))
-        font = QtGui.QFont()
-        font.setPointSize(12)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_15.setFont(font)
-        self.label_15.setStyleSheet("background:transparent;\n"
-"color:white;\n"
-"font-weight:bold;\n"
-"border:none;")
-        self.label_15.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_15.setObjectName("label_15")
-        self.label_3 = QtWidgets.QLabel(self.KrivaKoxa)
-        self.label_3.setGeometry(QtCore.QRect(10, 10, 16, 16))
-        self.label_3.setObjectName("label_3")
+"    background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0,\n"
+"    stop:0 rgba(70, 35, 105, 200),\n"
+"    stop:0.427447 rgba(60, 75, 135, 200),\n"
+"    stop:1 rgba(120, 75, 135, 220));\n"
+"}")
+        self.pushButton_3.setText("")
+        self.pushButton_3.setCheckable(True)
+        self.pushButton_3.setObjectName("pushButton_3")
+        self.pushButton_3.raise_()
+        self.pushButton_2.raise_()
+        self.b_deleteProcImage2.raise_()
+        self.l_OrigImage_pg2.raise_()
+        self.l_ProcImage_pg2.raise_()
+        self.b_deleteOrigImage2.raise_()
+        self.b_SaveProcImage2.raise_()
+        self.b_AddOrigImage2.raise_()
+        self.label_3.raise_()
+        self.colorButton_0_56.raise_()
+        self.colorButton_0_55.raise_()
+        self.colorButton_0_54.raise_()
+        self.colorButton_3_62.raise_()
+        self.colorButton_3_60.raise_()
+        self.colorButton_3_61.raise_()
+        self.b_processImageKrivaKoxa.raise_()
+        self.label_15.raise_()
+        self.pushButton.raise_()
+        self.colorButton_0_61.raise_()
+        self.colorButton_0_62.raise_()
+        self.colorButton_0_60.raise_()
         self.stackedWidget.addWidget(self.KrivaKoxa)
         self.tabWidget.addTab(self.tab, "")
         self.tab_2 = QtWidgets.QWidget()
@@ -4330,173 +1899,50 @@ class Ui_MainMenu(object):
         self.b_AddOrigImage0.setText(_translate("MainMenu", "+"))
         self.b_deleteProcImage0.setText(_translate("MainMenu", "X"))
         self.b_SaveProcImage0.setText(_translate("MainMenu", "+"))
-        self.b_processImageGOF.setText(_translate("MainMenu", "Обробити фото"))
-        self.colorButton_0_0.setToolTip(_translate("MainMenu", "Чорний"))
-        self.colorButton_0_1.setToolTip(_translate("MainMenu", "Вугільний"))
-        self.colorButton_0_4.setToolTip(_translate("MainMenu", "Червоний рубін"))
-        self.colorButton_0_5.setToolTip(_translate("MainMenu", "Помаранчевий"))
-        self.colorButton_0_6.setToolTip(_translate("MainMenu", "Рожевий"))
-        self.colorButton_0_7.setToolTip(_translate("MainMenu", "Аквамарин"))
-        self.colorButton_0_8.setToolTip(_translate("MainMenu", "Світло-зелений"))
-        self.colorButton_0_9.setToolTip(_translate("MainMenu", "Кремовий"))
-        self.colorButton_1_0.setToolTip(_translate("MainMenu", "Темно-сірий"))
-        self.colorButton_1_1.setToolTip(_translate("MainMenu", "Темно-коричневий"))
-        self.colorButton_1_2.setToolTip(_translate("MainMenu", "Темний бірюзовий"))
-        self.colorButton_1_3.setToolTip(_translate("MainMenu", "Морська хвиля (темна)"))
-        self.colorButton_1_4.setToolTip(_translate("MainMenu", "Каштановий"))
-        self.colorButton_1_5.setToolTip(_translate("MainMenu", "Червоний"))
-        self.colorButton_1_6.setToolTip(_translate("MainMenu", "Малиновий"))
-        self.colorButton_1_7.setToolTip(_translate("MainMenu", "Блакитний"))
-        self.colorButton_1_8.setToolTip(_translate("MainMenu", "Світло-жовтий"))
-        self.colorButton_1_9.setToolTip(_translate("MainMenu", "Білий дим"))
-        self.colorButton_2_0.setToolTip(_translate("MainMenu", "Антрацитовий"))
-        self.colorButton_2_1.setToolTip(_translate("MainMenu", "Темно-сливовий"))
-        self.colorButton_2_2.setToolTip(_translate("MainMenu", "Темний хакі"))
-        self.colorButton_2_3.setToolTip(_translate("MainMenu", "Глибокий синій"))
-        self.colorButton_2_4.setToolTip(_translate("MainMenu", "Махагон"))
-        self.colorButton_2_5.setToolTip(_translate("MainMenu", "Пурпуровий"))
-        self.colorButton_2_6.setToolTip(_translate("MainMenu", "Яскраво-зелений"))
-        self.colorButton_2_7.setToolTip(_translate("MainMenu", "Небесно-блакитний"))
-        self.colorButton_2_8.setToolTip(_translate("MainMenu", "Жовтий"))
-        self.colorButton_2_9.setToolTip(_translate("MainMenu", "Світло-сірий"))
-        self.colorButton_3_0.setToolTip(_translate("MainMenu", "Темно-синій"))
-        self.colorButton_3_1.setToolTip(_translate("MainMenu", "Графіт"))
-        self.colorButton_3_2.setToolTip(_translate("MainMenu", "Лісовий зелений"))
-        self.colorButton_3_3.setToolTip(_translate("MainMenu", "Сапфіровий"))
-        self.colorButton_3_4.setToolTip(_translate("MainMenu", "Індиго"))
-        self.colorButton_3_5.setToolTip(_translate("MainMenu", "Темно-рожевий"))
-        self.colorButton_3_6.setToolTip(_translate("MainMenu", "Весняний зелений"))
-        self.colorButton_3_7.setToolTip(_translate("MainMenu", "Синій (стандартний)"))
-        self.colorButton_3_8.setToolTip(_translate("MainMenu", "Золотий"))
-        self.colorButton_3_9.setToolTip(_translate("MainMenu", "Сріблястий"))
-        self.colorButton_4_0.setToolTip(_translate("MainMenu", "Темно-зелений"))
-        self.colorButton_4_1.setToolTip(_translate("MainMenu", "Бордовий"))
-        self.colorButton_4_2.setToolTip(_translate("MainMenu", "Коричневий"))
-        self.colorButton_4_3.setToolTip(_translate("MainMenu", "Темно-червоний"))
-        self.colorButton_4_4.setToolTip(_translate("MainMenu", "Темно-оранжевий"))
-        self.colorButton_4_5.setToolTip(_translate("MainMenu", "Фуксія"))
-        self.colorButton_4_6.setToolTip(_translate("MainMenu", "Бірюзовий"))
-        self.colorButton_4_7.setToolTip(_translate("MainMenu", "Лавандовий"))
-        self.colorButton_4_8.setToolTip(_translate("MainMenu", "Слонова кістка"))
-        self.colorButton_4_9.setToolTip(_translate("MainMenu", "Білий"))
-        self.colorButton_0_2.setToolTip(_translate("MainMenu", "Темно-пурпурний"))
-        self.colorButton_0_3.setToolTip(_translate("MainMenu", "Пляшково-зелений"))
-        self.label_13.setText(_translate("MainMenu", "Палітра кольорів"))
         self.label.setText(_translate("MainMenu", "1"))
+        self.b_processImageGOF.setText(_translate("MainMenu", "Обробити фото"))
+        self.colorButton_0_66.setToolTip(_translate("MainMenu", "Чорний"))
+        self.colorButton_0_67.setToolTip(_translate("MainMenu", "Темно-пурпурний"))
+        self.colorButton_0_68.setToolTip(_translate("MainMenu", "Вугільний"))
+        self.colorButton_3_66.setToolTip(_translate("MainMenu", "Темно-рожевий"))
+        self.colorButton_3_67.setToolTip(_translate("MainMenu", "Індиго"))
+        self.colorButton_3_68.setToolTip(_translate("MainMenu", "Сапфіровий"))
+        self.colorButton_0_69.setToolTip(_translate("MainMenu", "Рожевий"))
+        self.colorButton_0_70.setToolTip(_translate("MainMenu", "Світло-зелений"))
+        self.colorButton_0_71.setToolTip(_translate("MainMenu", "Аквамарин"))
+        self.label_17.setText(_translate("MainMenu", "Кольори"))
         self.b_deleteOrigImage1.setText(_translate("MainMenu", "X"))
         self.b_AddOrigImage1.setText(_translate("MainMenu", "+"))
         self.b_deleteProcImage1.setText(_translate("MainMenu", "X"))
         self.b_SaveProcImage1.setText(_translate("MainMenu", "+"))
-        self.b_processImageNP.setText(_translate("MainMenu", "Обробити фото"))
-        self.colorButton_0_40.setToolTip(_translate("MainMenu", "Чорний"))
-        self.colorButton_0_41.setToolTip(_translate("MainMenu", "Вугільний"))
-        self.colorButton_0_42.setToolTip(_translate("MainMenu", "Червоний рубін"))
-        self.colorButton_0_43.setToolTip(_translate("MainMenu", "Помаранчевий"))
-        self.colorButton_0_44.setToolTip(_translate("MainMenu", "Рожевий"))
-        self.colorButton_0_45.setToolTip(_translate("MainMenu", "Аквамарин"))
-        self.colorButton_0_46.setToolTip(_translate("MainMenu", "Світло-зелений"))
-        self.colorButton_0_47.setToolTip(_translate("MainMenu", "Кремовий"))
-        self.colorButton_1_40.setToolTip(_translate("MainMenu", "Темно-сірий"))
-        self.colorButton_1_41.setToolTip(_translate("MainMenu", "Темно-коричневий"))
-        self.colorButton_1_42.setToolTip(_translate("MainMenu", "Темний бірюзовий"))
-        self.colorButton_1_43.setToolTip(_translate("MainMenu", "Морська хвиля (темна)"))
-        self.colorButton_1_44.setToolTip(_translate("MainMenu", "Каштановий"))
-        self.colorButton_1_45.setToolTip(_translate("MainMenu", "Червоний"))
-        self.colorButton_1_46.setToolTip(_translate("MainMenu", "Малиновий"))
-        self.colorButton_1_47.setToolTip(_translate("MainMenu", "Блакитний"))
-        self.colorButton_1_48.setToolTip(_translate("MainMenu", "Світло-жовтий"))
-        self.colorButton_1_49.setToolTip(_translate("MainMenu", "Білий дим"))
-        self.colorButton_2_40.setToolTip(_translate("MainMenu", "Антрацитовий"))
-        self.colorButton_2_41.setToolTip(_translate("MainMenu", "Темно-сливовий"))
-        self.colorButton_2_42.setToolTip(_translate("MainMenu", "Темний хакі"))
-        self.colorButton_2_43.setToolTip(_translate("MainMenu", "Глибокий синій"))
-        self.colorButton_2_44.setToolTip(_translate("MainMenu", "Махагон"))
-        self.colorButton_2_45.setToolTip(_translate("MainMenu", "Пурпуровий"))
-        self.colorButton_2_46.setToolTip(_translate("MainMenu", "Яскраво-зелений"))
-        self.colorButton_2_47.setToolTip(_translate("MainMenu", "Небесно-блакитний"))
-        self.colorButton_2_48.setToolTip(_translate("MainMenu", "Жовтий"))
-        self.colorButton_2_49.setToolTip(_translate("MainMenu", "Світло-сірий"))
-        self.colorButton_3_40.setToolTip(_translate("MainMenu", "Темно-синій"))
-        self.colorButton_3_41.setToolTip(_translate("MainMenu", "Графіт"))
-        self.colorButton_3_42.setToolTip(_translate("MainMenu", "Лісовий зелений"))
-        self.colorButton_3_43.setToolTip(_translate("MainMenu", "Сапфіровий"))
-        self.colorButton_3_44.setToolTip(_translate("MainMenu", "Індиго"))
-        self.colorButton_3_45.setToolTip(_translate("MainMenu", "Темно-рожевий"))
-        self.colorButton_3_46.setToolTip(_translate("MainMenu", "Весняний зелений"))
-        self.colorButton_3_47.setToolTip(_translate("MainMenu", "Синій (стандартний)"))
-        self.colorButton_3_48.setToolTip(_translate("MainMenu", "Золотий"))
-        self.colorButton_3_49.setToolTip(_translate("MainMenu", "Сріблястий"))
-        self.colorButton_4_40.setToolTip(_translate("MainMenu", "Темно-зелений"))
-        self.colorButton_4_41.setToolTip(_translate("MainMenu", "Бордовий"))
-        self.colorButton_4_42.setToolTip(_translate("MainMenu", "Коричневий"))
-        self.colorButton_4_43.setToolTip(_translate("MainMenu", "Темно-червоний"))
-        self.colorButton_4_44.setToolTip(_translate("MainMenu", "Темно-оранжевий"))
-        self.colorButton_4_45.setToolTip(_translate("MainMenu", "Фуксія"))
-        self.colorButton_4_46.setToolTip(_translate("MainMenu", "Бірюзовий"))
-        self.colorButton_4_47.setToolTip(_translate("MainMenu", "Лавандовий"))
-        self.colorButton_4_48.setToolTip(_translate("MainMenu", "Слонова кістка"))
-        self.colorButton_4_49.setToolTip(_translate("MainMenu", "Білий"))
-        self.colorButton_0_48.setToolTip(_translate("MainMenu", "Темно-пурпурний"))
-        self.colorButton_0_49.setToolTip(_translate("MainMenu", "Пляшково-зелений"))
-        self.label_14.setText(_translate("MainMenu", "Палітра кольорів"))
         self.label_2.setText(_translate("MainMenu", "2"))
+        self.b_processImageNP.setText(_translate("MainMenu", "Обробити фото"))
+        self.label_16.setText(_translate("MainMenu", "Кольори"))
+        self.colorButton_0_63.setToolTip(_translate("MainMenu", "Вугільний"))
+        self.colorButton_0_64.setToolTip(_translate("MainMenu", "Темно-пурпурний"))
+        self.colorButton_0_65.setToolTip(_translate("MainMenu", "Чорний"))
+        self.colorButton_3_63.setToolTip(_translate("MainMenu", "Індиго"))
+        self.colorButton_3_64.setToolTip(_translate("MainMenu", "Темно-рожевий"))
+        self.colorButton_3_65.setToolTip(_translate("MainMenu", "Сапфіровий"))
+        self.colorButton_0_57.setToolTip(_translate("MainMenu", "Аквамарин"))
+        self.colorButton_0_58.setToolTip(_translate("MainMenu", "Світло-зелений"))
+        self.colorButton_0_59.setToolTip(_translate("MainMenu", "Рожевий"))
         self.b_deleteProcImage2.setText(_translate("MainMenu", "X"))
         self.b_deleteOrigImage2.setText(_translate("MainMenu", "X"))
         self.b_SaveProcImage2.setText(_translate("MainMenu", "+"))
         self.b_AddOrigImage2.setText(_translate("MainMenu", "+"))
-        self.b_processImageKrivaKoxa.setText(_translate("MainMenu", "Обробити фото"))
-        self.colorButton_0_50.setToolTip(_translate("MainMenu", "Чорний"))
-        self.colorButton_0_51.setToolTip(_translate("MainMenu", "Вугільний"))
-        self.colorButton_0_52.setToolTip(_translate("MainMenu", "Червоний рубін"))
-        self.colorButton_0_53.setToolTip(_translate("MainMenu", "Помаранчевий"))
-        self.colorButton_0_54.setToolTip(_translate("MainMenu", "Рожевий"))
-        self.colorButton_0_55.setToolTip(_translate("MainMenu", "Аквамарин"))
-        self.colorButton_0_56.setToolTip(_translate("MainMenu", "Світло-зелений"))
-        self.colorButton_0_57.setToolTip(_translate("MainMenu", "Кремовий"))
-        self.colorButton_1_50.setToolTip(_translate("MainMenu", "Темно-сірий"))
-        self.colorButton_1_51.setToolTip(_translate("MainMenu", "Темно-коричневий"))
-        self.colorButton_1_52.setToolTip(_translate("MainMenu", "Темний бірюзовий"))
-        self.colorButton_1_53.setToolTip(_translate("MainMenu", "Морська хвиля (темна)"))
-        self.colorButton_1_54.setToolTip(_translate("MainMenu", "Каштановий"))
-        self.colorButton_1_55.setToolTip(_translate("MainMenu", "Червоний"))
-        self.colorButton_1_56.setToolTip(_translate("MainMenu", "Малиновий"))
-        self.colorButton_1_57.setToolTip(_translate("MainMenu", "Блакитний"))
-        self.colorButton_1_58.setToolTip(_translate("MainMenu", "Світло-жовтий"))
-        self.colorButton_1_59.setToolTip(_translate("MainMenu", "Білий дим"))
-        self.colorButton_2_50.setToolTip(_translate("MainMenu", "Антрацитовий"))
-        self.colorButton_2_51.setToolTip(_translate("MainMenu", "Темно-сливовий"))
-        self.colorButton_2_52.setToolTip(_translate("MainMenu", "Темний хакі"))
-        self.colorButton_2_53.setToolTip(_translate("MainMenu", "Глибокий синій"))
-        self.colorButton_2_54.setToolTip(_translate("MainMenu", "Махагон"))
-        self.colorButton_2_55.setToolTip(_translate("MainMenu", "Пурпуровий"))
-        self.colorButton_2_56.setToolTip(_translate("MainMenu", "Яскраво-зелений"))
-        self.colorButton_2_57.setToolTip(_translate("MainMenu", "Небесно-блакитний"))
-        self.colorButton_2_58.setToolTip(_translate("MainMenu", "Жовтий"))
-        self.colorButton_2_59.setToolTip(_translate("MainMenu", "Світло-сірий"))
-        self.colorButton_3_50.setToolTip(_translate("MainMenu", "Темно-синій"))
-        self.colorButton_3_51.setToolTip(_translate("MainMenu", "Графіт"))
-        self.colorButton_3_52.setToolTip(_translate("MainMenu", "Лісовий зелений"))
-        self.colorButton_3_53.setToolTip(_translate("MainMenu", "Сапфіровий"))
-        self.colorButton_3_54.setToolTip(_translate("MainMenu", "Індиго"))
-        self.colorButton_3_55.setToolTip(_translate("MainMenu", "Темно-рожевий"))
-        self.colorButton_3_56.setToolTip(_translate("MainMenu", "Весняний зелений"))
-        self.colorButton_3_57.setToolTip(_translate("MainMenu", "Синій (стандартний)"))
-        self.colorButton_3_58.setToolTip(_translate("MainMenu", "Золотий"))
-        self.colorButton_3_59.setToolTip(_translate("MainMenu", "Сріблястий"))
-        self.colorButton_4_50.setToolTip(_translate("MainMenu", "Темно-зелений"))
-        self.colorButton_4_51.setToolTip(_translate("MainMenu", "Бордовий"))
-        self.colorButton_4_52.setToolTip(_translate("MainMenu", "Коричневий"))
-        self.colorButton_4_53.setToolTip(_translate("MainMenu", "Темно-червоний"))
-        self.colorButton_4_54.setToolTip(_translate("MainMenu", "Темно-оранжевий"))
-        self.colorButton_4_55.setToolTip(_translate("MainMenu", "Фуксія"))
-        self.colorButton_4_56.setToolTip(_translate("MainMenu", "Бірюзовий"))
-        self.colorButton_4_57.setToolTip(_translate("MainMenu", "Лавандовий"))
-        self.colorButton_4_58.setToolTip(_translate("MainMenu", "Слонова кістка"))
-        self.colorButton_4_59.setToolTip(_translate("MainMenu", "Білий"))
-        self.colorButton_0_58.setToolTip(_translate("MainMenu", "Темно-пурпурний"))
-        self.colorButton_0_59.setToolTip(_translate("MainMenu", "Пляшково-зелений"))
-        self.label_15.setText(_translate("MainMenu", "Палітра кольорів"))
         self.label_3.setText(_translate("MainMenu", "3"))
+        self.colorButton_0_56.setToolTip(_translate("MainMenu", "Світло-зелений"))
+        self.colorButton_0_55.setToolTip(_translate("MainMenu", "Аквамарин"))
+        self.colorButton_0_54.setToolTip(_translate("MainMenu", "Рожевий"))
+        self.colorButton_3_62.setToolTip(_translate("MainMenu", "Темно-рожевий"))
+        self.colorButton_3_60.setToolTip(_translate("MainMenu", "Індиго"))
+        self.colorButton_3_61.setToolTip(_translate("MainMenu", "Сапфіровий"))
+        self.b_processImageKrivaKoxa.setText(_translate("MainMenu", "Обробити фото"))
+        self.label_15.setText(_translate("MainMenu", "Кольори"))
+        self.colorButton_0_61.setToolTip(_translate("MainMenu", "Темно-пурпурний"))
+        self.colorButton_0_62.setToolTip(_translate("MainMenu", "Вугільний"))
+        self.colorButton_0_60.setToolTip(_translate("MainMenu", "Чорний"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainMenu", "Генерація"))
         self.listWidget_2.setSortingEnabled(False)
         __sortingEnabled = self.listWidget_2.isSortingEnabled()

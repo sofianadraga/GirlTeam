@@ -2,7 +2,7 @@
 from PyQt5 import QtWidgets
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QFileDialog
+from PyQt5.QtWidgets import QFileDialog, QPushButton
 import sys
 from girlproject.ui import Registration, MainMenu, Login
 from database_manager import DatabaseManager
@@ -10,7 +10,6 @@ from database_manager import DatabaseManager
 # Глобальний об'єкт для роботи з базою даних
 db_manager = DatabaseManager()
 current_user = None  # Зберігає інформацію про поточного користувача
-
 
 class MyLoginWindow(QtWidgets.QMainWindow, Login.Ui_MainWindow):
     def __init__(self):
@@ -244,8 +243,6 @@ class MyMainMenu(QtWidgets.QMainWindow, MainMenu.Ui_MainMenu):
 
         # Підключаємо другий listWidget до другого stackedWidget
         self.listWidget_2.currentRowChanged.connect(self.switch_stacked_widget_2)
-
-        # Встановлюємо початкові значення
         self.listWidget.setCurrentRow(0)
         self.stackedWidget.setCurrentIndex(0)
 
@@ -266,6 +263,94 @@ class MyMainMenu(QtWidgets.QMainWindow, MainMenu.Ui_MainMenu):
         self.b_deleteOrigImage2.clicked.connect(self.closeOrigImage)
         self.b_deleteOrigImageEnc.clicked.connect(self.closeOrigImage)
         self.b_deleteOrigImageDec.clicked.connect(self.closeOrigImage)
+       # Налаштування кнопок як checkable для сторінки KrivaKoxa
+        try:
+            self.pushButton.setCheckable(True)
+            self.pushButton_2.setCheckable(True)
+            self.pushButton_3.setCheckable(True)
+            self.pushButton.clicked.connect(self.check_button)
+            self.pushButton_2.clicked.connect(self.check_button)
+            self.pushButton_3.clicked.connect(self.check_button)
+        except AttributeError:
+            print("Помилка: Одна або більше кнопок (pushButton, pushButton_2, pushButton_3) не знайдені")
+
+        # Налаштування кнопок як checkable для сторінки NoisePerlin
+        try:
+            self.pushButton_4.setCheckable(True)
+            self.pushButton_5.setCheckable(True)
+            self.pushButton_6.setCheckable(True)
+            self.pushButton_4.clicked.connect(self.check_button)
+            self.pushButton_5.clicked.connect(self.check_button)
+            self.pushButton_6.clicked.connect(self.check_button)
+        except AttributeError:
+            print("Помилка: Одна або більше кнопок (pushButton_4, pushButton_5, pushButton_6) не знайдені")
+
+        # Налаштування кнопок як checkable для сторінки GameOfLife
+        try:
+            self.pushButton_7.setCheckable(True)
+            self.pushButton_8.setCheckable(True)
+            self.pushButton_9.setCheckable(True)
+            self.pushButton_7.clicked.connect(self.check_button)
+            self.pushButton_8.clicked.connect(self.check_button)
+            self.pushButton_9.clicked.connect(self.check_button)
+        except AttributeError:
+            print("Помилка: Одна або більше кнопок (pushButton_7, pushButton_8, pushButton_9) не знайдені")
+
+    def check_button(self):
+        """Забезпечує, що лише одна кнопка з відповідної групи може бути вибраною"""
+        sender = self.sender()  # Отримуємо кнопку, яка була натиснута
+
+        # Групи кнопок для кожної сторінки
+        kriva_koxa_buttons = [self.pushButton, self.pushButton_2, self.pushButton_3]
+        noise_perlin_buttons = [self.pushButton_4, self.pushButton_5, self.pushButton_6]
+        game_of_life_buttons = [self.pushButton_7, self.pushButton_8, self.pushButton_9]
+
+        # Визначаємо, до якої групи належить натиснута кнопка
+        if sender in kriva_koxa_buttons:
+            buttons = kriva_koxa_buttons
+        elif sender in noise_perlin_buttons:
+            buttons = noise_perlin_buttons
+        elif sender in game_of_life_buttons:
+            buttons = game_of_life_buttons
+        else:
+            print("Помилка: Натиснута кнопка не належить до жодної групи")
+            return
+
+        # Скидаємо стан checked для всіх кнопок у групі, крім натиснутої
+        for button in buttons:
+            if button != sender:
+                button.setChecked(False)
+
+    def show_message(self, title, message, icon_type):
+        """Показує стилізоване повідомлення користувачу"""
+        msg_box = QtWidgets.QMessageBox(self)
+        msg_box.setWindowTitle(title)
+        msg_box.setText(message)
+        msg_box.setIcon(icon_type)
+        msg_box.setStyleSheet("""
+              QMessageBox {
+                  background-color: #2b2b2b;
+                  color: white;
+              }
+              QMessageBox QLabel {
+                  color: white;
+                  font-weight: bold;
+                  background: transparent;
+              }
+              QMessageBox QPushButton {
+                  color: white;
+                  font-weight: bold;
+                  background-color: #444;
+                  border: 1px solid #888;
+                  padding: 5px 15px;
+                  min-width: 80px;
+              }
+              QMessageBox QPushButton:hover {
+                  background-color: #666;
+              }
+          """)
+        msg_box.exec_()
+
 
     def get_label_by_button(self, button):
         """Визначає відповідний QLabel за кнопкою"""

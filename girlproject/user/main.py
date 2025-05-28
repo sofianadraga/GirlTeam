@@ -1,5 +1,6 @@
+import uuid
 
-from PyQt5 import QtWidgets
+from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QFileDialog, QPushButton
@@ -224,7 +225,6 @@ class MyRegistrationWindow(QtWidgets.QMainWindow, Registration.Ui_MainWindow2):
         self.main_menu_window.show()
         self.close()  # Закриваємо вікно входу
 
-
 class MyMainMenu(QtWidgets.QMainWindow, MainMenu.Ui_MainMenu):
     def __init__(self):
         super().__init__()
@@ -238,135 +238,216 @@ class MyMainMenu(QtWidgets.QMainWindow, MainMenu.Ui_MainMenu):
         # Встановлюємо центрування для QLabel з зображенням
         self.l_OrigImage.setAlignment(Qt.AlignCenter)
 
-        # Підключаємо перший listWidget до першого stackedWidget
-        self.listWidget.currentRowChanged.connect(self.switch_stacked_widget)
+        self.b_show.clicked.connect(self.show_elements)
+        # Налаштування QScrollArea для вкладки "Генерація"
+        self.scrollArea = QtWidgets.QScrollArea(self.tab)
+        self.scrollArea.setGeometry(QtCore.QRect(0, 0, 1921, 991))
+        self.scrollArea.setWidgetResizable(True)
+        self.scrollArea.setObjectName("scrollArea")
 
-        # Підключаємо другий listWidget до другого stackedWidget
-        self.listWidget_2.currentRowChanged.connect(self.switch_stacked_widget_2)
-        self.listWidget.setCurrentRow(0)
-        self.stackedWidget.setCurrentIndex(0)
+        # Контейнер для вмісту QScrollArea
+        self.scrollAreaWidgetContents = QtWidgets.QWidget()
+        self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
+        self.scrollAreaWidgetContents.setMinimumHeight(2500)  # Велика висота для прокрутки
 
-        self.listWidget_2.setCurrentRow(0)
-        self.stackedWidget_2.setCurrentIndex(0)
+        # Переносимо b_show і b_hide до scrollAreaWidgetContents
+        self.b_show.setParent(self.scrollAreaWidgetContents)
+        self.b_hide.setParent(self.scrollAreaWidgetContents)
+        self.b_show.setGeometry(QtCore.QRect(770, 0, 171, 51))
+        self.b_hide.setGeometry(QtCore.QRect(980, 0, 171, 51))
+
+        # Встановлюємо вміст QScrollArea
+        self.scrollArea.setWidget(self.scrollAreaWidgetContents)
+
+        # Додаємо вертикальну QScrollBar
+        self.verticalScrollBar = QtWidgets.QScrollBar(self.tab)
+        self.verticalScrollBar.setGeometry(QtCore.QRect(1890, 10, 20, 741))
+        self.verticalScrollBar.setOrientation(QtCore.Qt.Vertical)
+        self.verticalScrollBar.setObjectName("verticalScrollBar")
+        self.scrollArea.setVerticalScrollBar(self.verticalScrollBar)
+
         # Підключаємо кнопку для виходу з профілю b_exit
         self.b_exit.clicked.connect(self.exit_profile)
 
         # Підключаємо кнопки для входу в файловий діалог
         self.b_AddOrigImage0.clicked.connect(self.enterFileDialog)
-        self.b_AddOrigImage1.clicked.connect(self.enterFileDialog)
-        self.b_AddOrigImage2.clicked.connect(self.enterFileDialog)
+
         self.b_AddOrigImageEnc.clicked.connect(self.enterFileDialog)
-        self.b_AddOrigImageDec.clicked.connect(self.enterFileDialog)
         # Підключаємо кнопки для прибирання оригінального зображення
         self.b_deleteOrigImage0.clicked.connect(self.closeOrigImage)
-        self.b_deleteOrigImage1.clicked.connect(self.closeOrigImage)
-        self.b_deleteOrigImage2.clicked.connect(self.closeOrigImage)
         self.b_deleteOrigImageEnc.clicked.connect(self.closeOrigImage)
-        self.b_deleteOrigImageDec.clicked.connect(self.closeOrigImage)
-       # Налаштування кнопок як checkable для сторінки KrivaKoxa
-        try:
-            self.pushButton.setCheckable(True)
-            self.pushButton_2.setCheckable(True)
-            self.pushButton_3.setCheckable(True)
-            self.pushButton.clicked.connect(self.check_button)
-            self.pushButton_2.clicked.connect(self.check_button)
-            self.pushButton_3.clicked.connect(self.check_button)
-        except AttributeError:
-            print("Помилка: Одна або більше кнопок (pushButton, pushButton_2, pushButton_3) не знайдені")
 
-        # Налаштування кнопок як checkable для сторінки NoisePerlin
-        try:
-            self.pushButton_4.setCheckable(True)
-            self.pushButton_5.setCheckable(True)
-            self.pushButton_6.setCheckable(True)
-            self.pushButton_4.clicked.connect(self.check_button)
-            self.pushButton_5.clicked.connect(self.check_button)
-            self.pushButton_6.clicked.connect(self.check_button)
-        except AttributeError:
-            print("Помилка: Одна або більше кнопок (pushButton_4, pushButton_5, pushButton_6) не знайдені")
+        # Список елементів для керування видимістю на вкладці "Генерація"
+        self.tab_elements = [
+            self.b_deleteOrigImage0, self.b_AddOrigImage0, self.b_deleteProcImage0, self.b_SaveProcImage0,
+            self.l_OrigImage, self.L_ProcImage, self.b_processImage, self.pushButton_1, self.pushButton_2,
+            self.pushButton_3, self.colorButton_0_66, self.colorButton_0_67, self.colorButton_0_68,
+            self.colorButton_3_66, self.colorButton_3_67, self.colorButton_3_68, self.colorButton_0_69,
+            self.colorButton_0_70, self.colorButton_0_71, self.radioButton_1, self.radioButton_2,
+            self.radioButton_3
+        ]
 
-        # Налаштування кнопок як checkable для сторінки GameOfLife
-        try:
-            self.pushButton_7.setCheckable(True)
-            self.pushButton_8.setCheckable(True)
-            self.pushButton_9.setCheckable(True)
-            self.pushButton_7.clicked.connect(self.check_button)
-            self.pushButton_8.clicked.connect(self.check_button)
-            self.pushButton_9.clicked.connect(self.check_button)
-        except AttributeError:
-            print("Помилка: Одна або більше кнопок (pushButton_7, pushButton_8, pushButton_9) не знайдені")
+        for element in self.tab_elements:
+            element.setVisible(False)
 
-    def check_button(self):
-        """Забезпечує, що лише одна кнопка з відповідної групи може бути вибраною"""
-        sender = self.sender()  # Отримуємо кнопку, яка була натиснута
+            # Список елементів для вкладки "Стеганографія"
+        self.encryption_elements = [
+            self.b_AddOrigImageEnc, self.l_OrigImageEnc, self.b_deleteOrigImageEnc, self.b_deleteProcImageEnc,
+            self.l_ProcImageEnc, self.b_SaveProcImageEnc, self.frame_2, self.frame_3
+        ]
 
-        # Групи кнопок для кожної сторінки
-        kriva_koxa_buttons = [self.pushButton, self.pushButton_2, self.pushButton_3]
-        noise_perlin_buttons = [self.pushButton_4, self.pushButton_5, self.pushButton_6]
-        game_of_life_buttons = [self.pushButton_7, self.pushButton_8, self.pushButton_9]
+        # Список елементів для вкладки "Інформація"
+        self.info_elements = [self.label_9, self.label_10, self.label_11]
 
-        # Визначаємо, до якої групи належить натиснута кнопка
-        if sender in kriva_koxa_buttons:
-            buttons = kriva_koxa_buttons
-        elif sender in noise_perlin_buttons:
-            buttons = noise_perlin_buttons
-        elif sender in game_of_life_buttons:
-            buttons = game_of_life_buttons
+        # Ініціалізація для динамічного додавання елементів
+        self.element_groups = []  # Список груп доданих елементів
+        self.y_offset = 70  # Початкове зміщення для нових груп
+
+        # Підключаємо сигнали
+        self.b_show.clicked.connect(self.add_element_group)
+        self.b_hide.clicked.connect(self.remove_element_group)
+        self.b_exit.clicked.connect(self.exit_profile)
+        self.b_AddOrigImage0.clicked.connect(self.enterFileDialog)
+        self.b_AddOrigImageEnc.clicked.connect(self.enterFileDialog)
+        self.b_deleteOrigImage0.clicked.connect(self.closeOrigImage)
+        self.b_deleteOrigImageEnc.clicked.connect(self.closeOrigImage)
+        self.tabWidget.currentChanged.connect(self.on_tab_changed)
+
+    def on_tab_changed(self, index):
+        """Обробник зміни вкладки."""
+        current_tab = self.tabWidget.widget(index)
+        if current_tab == self.tab_2:  # Вкладка "Стеганографія"
+            self.show_elements()
+
+    def add_element_group(self):
+        """Додає новий набір елементів на вкладці 'Генерація'."""
+        group_id = str(uuid.uuid4())
+        y_offset = self.y_offset
+
+        # Створюємо новий набір елементів
+        new_group = []
+        for element in self.tab_elements:
+            new_element = self._clone_widget(element, group_id, y_offset)
+            new_element.setVisible(True)
+            new_group.append(new_element)
+
+            # Підключаємо сигнали для відповідних кнопок
+            if element.objectName() == "b_AddOrigImage0":
+                new_element.clicked.connect(self.enterFileDialog)
+            elif element.objectName() == "b_deleteOrigImage0":
+                new_element.clicked.connect(self.closeOrigImage)
+
+        self.element_groups.append(new_group)
+        self.y_offset += 750  # Збільшуємо зміщення для наступної групи
+
+        # Переміщуємо b_show і b_hide
+        self.b_show.setGeometry(QtCore.QRect(770, self.y_offset, 171, 51))
+        self.b_hide.setGeometry(QtCore.QRect(980, self.y_offset, 171, 51))
+
+        # Оновлюємо висоту вмісту QScrollArea
+        self.scrollAreaWidgetContents.setMinimumHeight(self.y_offset + 1000)
+
+    def remove_element_group(self):
+        """Видаляє останній доданий набір елементів."""
+        if self.element_groups:
+            last_group = self.element_groups.pop()
+            for element in last_group:
+                element.deleteLater()
+            self.y_offset = max(70, self.y_offset - 750)
+            self.b_show.setGeometry(QtCore.QRect(770, self.y_offset, 171, 51))
+            self.b_hide.setGeometry(QtCore.QRect(980, self.y_offset, 171, 51))
+            self.scrollAreaWidgetContents.setMinimumHeight(self.y_offset + 1000)
+
+    def _clone_widget(self, widget, group_id, y_offset):
+        """Створює копію віджета з новим ім'ям і зміщеним положенням."""
+        if isinstance(widget, QtWidgets.QPushButton):
+            new_widget = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+            new_widget.setCheckable(widget.isCheckable())
+            new_widget.setText(widget.text())
+        elif isinstance(widget, QtWidgets.QLabel):
+            new_widget = QtWidgets.QLabel(self.scrollAreaWidgetContents)
+            new_widget.setAlignment(widget.alignment())
+        elif isinstance(widget, QtWidgets.QRadioButton):
+            new_widget = QtWidgets.QRadioButton(self.scrollAreaWidgetContents)
+            new_widget.setText(widget.text())
         else:
-            print("Помилка: Натиснута кнопка не належить до жодної групи")
-            return
+            return None
 
-        # Скидаємо стан checked для всіх кнопок у групі, крім натиснутої
-        for button in buttons:
-            if button != sender:
-                button.setChecked(False)
+        # Копіюємо геометрію зі зміщенням по y
+        geom = widget.geometry()
+        new_widget.setGeometry(QtCore.QRect(geom.x(), geom.y() + y_offset - 70, geom.width(), geom.height()))
+        new_widget.setStyleSheet(widget.styleSheet())
+        new_widget.setObjectName(f"{widget.objectName()}_{group_id}")
+        return new_widget
 
-    def show_message(self, title, message, icon_type):
-        """Показує стилізоване повідомлення користувачу"""
-        msg_box = QtWidgets.QMessageBox(self)
-        msg_box.setWindowTitle(title)
-        msg_box.setText(message)
-        msg_box.setIcon(icon_type)
-        msg_box.setStyleSheet("""
-              QMessageBox {
-                  background-color: #2b2b2b;
-                  color: white;
-              }
-              QMessageBox QLabel {
-                  color: white;
-                  font-weight: bold;
-                  background: transparent;
-              }
-              QMessageBox QPushButton {
-                  color: white;
-                  font-weight: bold;
-                  background-color: #444;
-                  border: 1px solid #888;
-                  padding: 5px 15px;
-                  min-width: 80px;
-              }
-              QMessageBox QPushButton:hover {
-                  background-color: #666;
-              }
-          """)
-        msg_box.exec_()
-
+    def show_elements(self):
+        """Показує всі елементи на поточній вкладці та переміщує кнопки b_show і b_hide на y=800."""
+        current_tab = self.tabWidget.currentWidget()
+        if current_tab == self.tab:  # Вкладка "Генерація"
+            for element in self.tab_elements:
+                element.setVisible(True)
+            # Переміщення кнопок b_show і b_hide на y=800
+            self.b_show.setGeometry(QtCore.QRect(770, 800, 171, 51))
+            self.b_hide.setGeometry(QtCore.QRect(980, 800, 171, 51))
 
     def get_label_by_button(self, button):
         """Визначає відповідний QLabel за кнопкою"""
         button_name = button.objectName()
+        print(f"button_name = {button_name}")
 
-        if '0' in button_name:
-            return self.l_OrigImage
-        elif '1' in button_name:
-            return self.l_OrigImage_pg1
-        elif '2' in button_name:
-            return self.l_OrigImage_pg2
-        elif 'Enc' in button_name:
-            return self.l_OrigImageEnc
-        elif 'Dec' in button_name:
-            return self.l_OrigImageDec
+        parts = button_name.split('_')
+        print(f"parts = {parts}")
 
+        # Якщо є третя частина і вона схожа на UUID (містить дефіси)
+        if len(parts) >= 3 and '-' in parts[2]:
+            print("Це скопійований елемент")
+            # Це скопійований елемент
+            base_name = '_'.join(parts[:2])  # b_AddOrigImage0
+            group_id = parts[2]  # UUID
+            print(f"base_name = {base_name}")
+            print(f"group_id = {group_id}")
+
+            # Визначаємо назву відповідного QLabel на основі базової назви кнопки
+            target_label_base = None
+            if 'AddOrigImage0' in base_name or 'deleteOrigImage0' in base_name:
+                target_label_base = 'l_OrigImage'
+            elif 'Enc' in base_name:
+                target_label_base = 'l_OrigImageEnc'
+            elif 'Dec' in base_name:
+                target_label_base = 'l_OrigImageDec'
+
+            print(f"target_label_base = {target_label_base}")
+
+            if target_label_base:
+                print(f"Шукаємо в {len(self.element_groups)} групах")
+                # Знаходимо відповідний QLabel в тій же групі
+                for i, group in enumerate(self.element_groups):
+                    print(f"Група {i}, елементів: {len(group)}")
+                    for j, element in enumerate(group):
+                        element_name = element.objectName()
+                        print(f"Елемент {j}: {element_name}, тип: {type(element).__name__}")
+                        if isinstance(element, QtWidgets.QLabel):
+                            print(f"Це QLabel, перевіряємо умови:")
+                            expected_name = f"{target_label_base}_{group_id}"
+                            print(f"Очікувана назва: {expected_name}")
+                            print(f"Фактична назва: {element_name}")
+                            if element_name == expected_name:
+                                print(f"ЗНАЙДЕНО! Повертаємо {element_name}")
+                                return element
+        else:
+            print("DEBUG: Це оригінальний елемент")
+            # Це оригінальний елемент
+            if 'AddOrigImage0' in button_name or 'deleteOrigImage0' in button_name:
+                print("DEBUG: Повертаємо self.l_OrigImage")
+                return self.l_OrigImage
+            elif 'Enc' in button_name:
+                print("DEBUG: Повертаємо self.l_OrigImageEnc")
+                return self.l_OrigImageEnc
+            elif 'Dec' in button_name:
+                print("DEBUG: Повертаємо self.l_OrigImageDec")
+                return self.l_OrigImageDec
+
+        print("DEBUG: Нічого не знайдено, повертаємо None")
         return None
 
     def enterFileDialog(self):

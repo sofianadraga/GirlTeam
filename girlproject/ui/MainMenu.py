@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\Users\andri\PycharmProjects\ProjectTeam\MainMenu2.ui'
+# Form implementation generated from reading ui file 'C:\Users\andri\PycharmProjects\ProjectTeam\MainMenu3.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -475,28 +475,88 @@ class Ui_MainMenu(object):
         self.tabWidget.addTab(self.tab, "")
         self.tab_2 = QtWidgets.QWidget()
         self.tab_2.setObjectName("tab_2")
-        self.frame_3 = QtWidgets.QFrame(self.tab_2)
-        self.frame_3.setGeometry(QtCore.QRect(970, 640, 431, 211))
-        self.frame_3.setStyleSheet("border: 2px solid rgba(235, 225, 225, 0.9);")
-        self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_3.setObjectName("frame_3")
-        self.label_20 = QtWidgets.QLabel(self.frame_3)
-        self.label_20.setEnabled(False)
-        self.label_20.setGeometry(QtCore.QRect(20, 20, 191, 41))
+        self.b_deleteProcImageDec = QtWidgets.QPushButton(self.tab_2)
+        self.b_deleteProcImageDec.setGeometry(QtCore.QRect(1330, 90, 31, 28))
+        self.b_deleteProcImageDec.setStyleSheet("background:purple;\n"
+"color:white;\n"
+"")
+        self.b_deleteProcImageDec.setObjectName("b_deleteProcImageDec")
+        self.b_SaveProcImageEnc = QtWidgets.QPushButton(self.tab_2)
+        self.b_SaveProcImageEnc.setGeometry(QtCore.QRect(620, 90, 81, 28))
+        self.b_SaveProcImageEnc.setStyleSheet("background:purple;\n"
+"color:white;\n"
+"")
+        self.b_SaveProcImageEnc.setObjectName("b_SaveProcImageEnc")
+        self.b_deleteOrigProcImageEnc = QtWidgets.QPushButton(self.tab_2)
+        self.b_deleteOrigProcImageEnc.setGeometry(QtCore.QRect(750, 90, 31, 28))
+        self.b_deleteOrigProcImageEnc.setStyleSheet("background:purple;\n"
+"color:white;\n"
+"")
+        self.b_deleteOrigProcImageEnc.setObjectName("b_deleteOrigProcImageEnc")
+        self.b_AddOrigImageEnc = QtWidgets.QPushButton(self.tab_2)
+        self.b_AddOrigImageEnc.setGeometry(QtCore.QRect(710, 90, 31, 28))
+        self.b_AddOrigImageEnc.setStyleSheet("background:purple;\n"
+"color:white;\n"
+"")
+        self.b_AddOrigImageEnc.setObjectName("b_AddOrigImageEnc")
+        self.l_ProcImageDec = QtWidgets.QLabel(self.tab_2)
+        self.l_ProcImageDec.setGeometry(QtCore.QRect(620, 120, 741, 551))
+        self.l_ProcImageDec.setStyleSheet("background:white;")
+        self.l_ProcImageDec.setText("")
+        self.l_ProcImageDec.setObjectName("l_ProcImageDec")
+        self.l_OrigImageEnc = QtWidgets.QLabel(self.tab_2)
+        self.l_OrigImageEnc.setGeometry(QtCore.QRect(620, 120, 741, 551))
+        self.l_OrigImageEnc.setStyleSheet("background:white;")
+        self.l_OrigImageEnc.setText("")
+        self.l_OrigImageEnc.setObjectName("l_OrigImageEnc")
+        self.b_switchMode = QtWidgets.QPushButton(self.tab_2)
+        self.b_switchMode.setGeometry(QtCore.QRect(990, 30, 61, 51))
+        self.b_switchMode.setStyleSheet("background:purple;\n"
+"color:white;\n"
+"")
+        self.b_switchMode.setText("")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("C:\\Users\\andri\\PycharmProjects\\ProjectTeam\\../PPR/GirlTeam/girlproject/ui/switch_button.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.b_switchMode.setIcon(icon)
+        self.b_switchMode.setIconSize(QtCore.QSize(42, 35))
+        self.b_switchMode.setObjectName("b_switchMode")
+        self.b_AddDecryptImage = QtWidgets.QPushButton(self.tab_2)
+        self.b_AddDecryptImage.setGeometry(QtCore.QRect(1290, 90, 31, 28))
+        self.b_AddDecryptImage.setStyleSheet("background:purple;\n"
+"color:white;\n"
+"")
+        self.b_AddDecryptImage.setObjectName("b_AddDecryptImage")
+        self.l_enc = QtWidgets.QLabel(self.tab_2)
+        self.l_enc.setEnabled(False)
+        self.l_enc.setGeometry(QtCore.QRect(920, 80, 191, 41))
         font = QtGui.QFont()
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
-        self.label_20.setFont(font)
-        self.label_20.setStyleSheet("background:transparent;\n"
+        self.l_enc.setFont(font)
+        self.l_enc.setMouseTracking(True)
+        self.l_enc.setStyleSheet("background:transparent;\n"
 "color:white;\n"
 "font-weight:bold;\n"
 "border:none;")
-        self.label_20.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_20.setObjectName("label_20")
-        self.b_ProcImageDecryptedText_2 = QtWidgets.QPushButton(self.frame_3)
-        self.b_ProcImageDecryptedText_2.setGeometry(QtCore.QRect(220, 20, 191, 41))
+        self.l_enc.setAlignment(QtCore.Qt.AlignCenter)
+        self.l_enc.setObjectName("l_enc")
+        self.l_dec = QtWidgets.QLabel(self.tab_2)
+        self.l_dec.setEnabled(False)
+        self.l_dec.setGeometry(QtCore.QRect(920, 80, 191, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.l_dec.setFont(font)
+        self.l_dec.setStyleSheet("background:transparent;\n"
+"color:white;\n"
+"font-weight:bold;\n"
+"border:none;")
+        self.l_dec.setAlignment(QtCore.Qt.AlignCenter)
+        self.l_dec.setObjectName("l_dec")
+        self.b_ProcImageDecryptedText = QtWidgets.QPushButton(self.tab_2)
+        self.b_ProcImageDecryptedText.setGeometry(QtCore.QRect(920, 690, 191, 41))
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
         brush.setStyle(QtCore.Qt.SolidPattern)
@@ -561,7 +621,7 @@ class Ui_MainMenu(object):
         brush = QtGui.QBrush(QtGui.QColor(131, 137, 255, 128))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.PlaceholderText, brush)
-        self.b_ProcImageDecryptedText_2.setPalette(palette)
+        self.b_ProcImageDecryptedText.setPalette(palette)
         font = QtGui.QFont()
         font.setFamily("Segoe UI Black")
         font.setPointSize(10)
@@ -571,10 +631,10 @@ class Ui_MainMenu(object):
         font.setWeight(75)
         font.setStrikeOut(False)
         font.setKerning(True)
-        self.b_ProcImageDecryptedText_2.setFont(font)
-        self.b_ProcImageDecryptedText_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.b_ProcImageDecryptedText_2.setFocusPolicy(QtCore.Qt.ClickFocus)
-        self.b_ProcImageDecryptedText_2.setStyleSheet("QPushButton {\n"
+        self.b_ProcImageDecryptedText.setFont(font)
+        self.b_ProcImageDecryptedText.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.b_ProcImageDecryptedText.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.b_ProcImageDecryptedText.setStyleSheet("QPushButton {\n"
 "    background-color: rgba(255, 255, 255, 0.3);\n"
 "    border:none;\n"
 "    border-radius: 10px;\n"
@@ -587,35 +647,28 @@ class Ui_MainMenu(object):
 "    background-color: rgba(200, 200, 200, 0.5);\n"
 "    text-decoration: underline;\n"
 "}")
-        self.b_ProcImageDecryptedText_2.setObjectName("b_ProcImageDecryptedText_2")
-        self.te_DecryptedText_2 = QtWidgets.QTextEdit(self.frame_3)
-        self.te_DecryptedText_2.setGeometry(QtCore.QRect(20, 70, 391, 121))
+        self.b_ProcImageDecryptedText.setObjectName("b_ProcImageDecryptedText")
+        self.te_DecryptedText = QtWidgets.QTextEdit(self.tab_2)
+        self.te_DecryptedText.setGeometry(QtCore.QRect(820, 760, 391, 121))
         font = QtGui.QFont()
         font.setPointSize(10)
-        self.te_DecryptedText_2.setFont(font)
-        self.te_DecryptedText_2.setStyleSheet("color:white;")
-        self.te_DecryptedText_2.setObjectName("te_DecryptedText_2")
-        self.b_deleteProcImageEnc = QtWidgets.QPushButton(self.tab_2)
-        self.b_deleteProcImageEnc.setGeometry(QtCore.QRect(1680, 40, 31, 28))
-        self.b_deleteProcImageEnc.setStyleSheet("background:purple;\n"
+        self.te_DecryptedText.setFont(font)
+        self.te_DecryptedText.setStyleSheet("color:white;")
+        self.te_DecryptedText.setObjectName("te_DecryptedText")
+        self.labelEnd = QtWidgets.QLabel(self.tab_2)
+        self.labelEnd.setGeometry(QtCore.QRect(930, 800, 161, 21))
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        self.labelEnd.setFont(font)
+        self.labelEnd.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.labelEnd.setStyleSheet("background:transparent;\n"
 "color:white;\n"
-"")
-        self.b_deleteProcImageEnc.setObjectName("b_deleteProcImageEnc")
-        self.b_SaveProcImageEnc = QtWidgets.QPushButton(self.tab_2)
-        self.b_SaveProcImageEnc.setGeometry(QtCore.QRect(1590, 40, 81, 28))
-        self.b_SaveProcImageEnc.setStyleSheet("background:purple;\n"
-"color:white;\n"
-"")
-        self.b_SaveProcImageEnc.setObjectName("b_SaveProcImageEnc")
-        self.frame_2 = QtWidgets.QFrame(self.tab_2)
-        self.frame_2.setGeometry(QtCore.QRect(520, 640, 431, 151))
-        self.frame_2.setStyleSheet("border: 2px solid rgba(235, 225, 225, 0.9);")
-        self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_2.setObjectName("frame_2")
-        self.le_EncryptedText = QtWidgets.QLineEdit(self.frame_2)
+"border:none;")
+        self.labelEnd.setAlignment(QtCore.Qt.AlignCenter)
+        self.labelEnd.setObjectName("labelEnd")
+        self.le_EncryptedText = QtWidgets.QLineEdit(self.tab_2)
         self.le_EncryptedText.setEnabled(True)
-        self.le_EncryptedText.setGeometry(QtCore.QRect(20, 80, 391, 41))
+        self.le_EncryptedText.setGeometry(QtCore.QRect(820, 750, 391, 41))
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
         brush.setStyle(QtCore.Qt.SolidPattern)
@@ -705,23 +758,8 @@ class Ui_MainMenu(object):
         self.le_EncryptedText.setFrame(False)
         self.le_EncryptedText.setReadOnly(False)
         self.le_EncryptedText.setObjectName("le_EncryptedText")
-        self.label_19 = QtWidgets.QLabel(self.frame_2)
-        self.label_19.setEnabled(False)
-        self.label_19.setGeometry(QtCore.QRect(20, 30, 191, 41))
-        font = QtGui.QFont()
-        font.setPointSize(12)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_19.setFont(font)
-        self.label_19.setMouseTracking(True)
-        self.label_19.setStyleSheet("background:transparent;\n"
-"color:white;\n"
-"font-weight:bold;\n"
-"border:none;")
-        self.label_19.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_19.setObjectName("label_19")
-        self.b_ProcImageEncryptedText = QtWidgets.QPushButton(self.frame_2)
-        self.b_ProcImageEncryptedText.setGeometry(QtCore.QRect(220, 30, 191, 41))
+        self.b_ProcImageEncryptedText = QtWidgets.QPushButton(self.tab_2)
+        self.b_ProcImageEncryptedText.setGeometry(QtCore.QRect(920, 690, 191, 41))
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
         brush.setStyle(QtCore.Qt.SolidPattern)
@@ -813,28 +851,6 @@ class Ui_MainMenu(object):
 "    text-decoration: underline;\n"
 "}")
         self.b_ProcImageEncryptedText.setObjectName("b_ProcImageEncryptedText")
-        self.b_deleteOrigImageEnc = QtWidgets.QPushButton(self.tab_2)
-        self.b_deleteOrigImageEnc.setGeometry(QtCore.QRect(920, 40, 31, 28))
-        self.b_deleteOrigImageEnc.setStyleSheet("background:purple;\n"
-"color:white;\n"
-"")
-        self.b_deleteOrigImageEnc.setObjectName("b_deleteOrigImageEnc")
-        self.b_AddOrigImageEnc = QtWidgets.QPushButton(self.tab_2)
-        self.b_AddOrigImageEnc.setGeometry(QtCore.QRect(880, 40, 31, 28))
-        self.b_AddOrigImageEnc.setStyleSheet("background:purple;\n"
-"color:white;\n"
-"")
-        self.b_AddOrigImageEnc.setObjectName("b_AddOrigImageEnc")
-        self.l_ProcImageEnc = QtWidgets.QLabel(self.tab_2)
-        self.l_ProcImageEnc.setGeometry(QtCore.QRect(970, 70, 741, 551))
-        self.l_ProcImageEnc.setStyleSheet("background:white;")
-        self.l_ProcImageEnc.setText("")
-        self.l_ProcImageEnc.setObjectName("l_ProcImageEnc")
-        self.l_OrigImageEnc = QtWidgets.QLabel(self.tab_2)
-        self.l_OrigImageEnc.setGeometry(QtCore.QRect(210, 70, 741, 551))
-        self.l_OrigImageEnc.setStyleSheet("background:white;")
-        self.l_OrigImageEnc.setText("")
-        self.l_OrigImageEnc.setObjectName("l_OrigImageEnc")
         self.tabWidget.addTab(self.tab_2, "")
         self.tab_4 = QtWidgets.QWidget()
         self.tab_4.setObjectName("tab_4")
@@ -897,20 +913,22 @@ class Ui_MainMenu(object):
         self.b_hide.setText(_translate("MainMenu", "-"))
         self.b_AddOrigImage0.setText(_translate("MainMenu", "+"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainMenu", "Генерація"))
-        self.label_20.setText(_translate("MainMenu", "ДЕШИФРУВАННЯ"))
-        self.b_ProcImageDecryptedText_2.setText(_translate("MainMenu", "Обробити фото"))
-        self.te_DecryptedText_2.setHtml(_translate("MainMenu", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        self.b_deleteProcImageDec.setText(_translate("MainMenu", "X"))
+        self.b_SaveProcImageEnc.setText(_translate("MainMenu", "Зберегти"))
+        self.b_deleteOrigProcImageEnc.setText(_translate("MainMenu", "X"))
+        self.b_AddOrigImageEnc.setText(_translate("MainMenu", "+"))
+        self.b_AddDecryptImage.setText(_translate("MainMenu", "+"))
+        self.l_enc.setText(_translate("MainMenu", "ШИФРУВАННЯ"))
+        self.l_dec.setText(_translate("MainMenu", "ДЕШИФРУВАННЯ"))
+        self.b_ProcImageDecryptedText.setText(_translate("MainMenu", "Обробити фото"))
+        self.te_DecryptedText.setHtml(_translate("MainMenu", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
-        self.b_deleteProcImageEnc.setText(_translate("MainMenu", "X"))
-        self.b_SaveProcImageEnc.setText(_translate("MainMenu", "Зберегти"))
+        self.labelEnd.setText(_translate("MainMenu", "Обробку завершено!"))
         self.le_EncryptedText.setPlaceholderText(_translate("MainMenu", "Зашифрований текст"))
-        self.label_19.setText(_translate("MainMenu", "ШИФРУВАННЯ"))
         self.b_ProcImageEncryptedText.setText(_translate("MainMenu", "Обробити фото"))
-        self.b_deleteOrigImageEnc.setText(_translate("MainMenu", "X"))
-        self.b_AddOrigImageEnc.setText(_translate("MainMenu", "+"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainMenu", "Стеганографія"))
         self.label_9.setText(_translate("MainMenu", "Про Андрія:"))
         self.label_10.setText(_translate("MainMenu", "Про Софію:"))
